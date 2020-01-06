@@ -1,0 +1,259 @@
+// IMPORTANT: you must include the following line in all your C files
+#include <lcom/lcf.h>
+
+#include <stdint.h>
+#include <stdio.h>
+
+// Any header files included below this line should have been created by you
+#include "mouse.h"
+#include "mouse_states.h"
+
+extern struct packet pp;
+extern int size;
+extern int counter;
+
+int main(int argc, char *argv[]) {
+  // sets the language of LCF messages (can be either EN-US or PT-PT)
+  lcf_set_language("EN-US");
+
+  // enables to log function invocations that are being "wrapped" by LCF
+  // [comment this out if you don't want/need/ it]
+  lcf_trace_calls("/home/lcom/labs/lab4/trace.txt");
+
+  // enables to save the output of printf function calls on a file
+  // [comment this out if you don't want/need it]
+  lcf_log_output("/home/lcom/labs/lab4/output.txt");
+
+  // handles control over to LCF
+  // [LCF handles command line arguments and invokes the right function]
+  if (lcf_start(argc, argv))
+    return 1;
+
+  // LCF clean up tasks
+  // [must be the last statement before return]
+  lcf_cleanup();
+
+  return 0;
+}
+
+int(mouse_test_packet)(uint32_t cnt) {
+
+  int packet_counter = cnt;
+
+  //ENABLE DATA REPORTING
+  mouse_enable_data_rpt();
+
+  uint8_t bit_no;
+
+  if (mouse_subscribe_int(&bit_no) != 0) {
+    return 1;
+  }
+
+  int r, ipc_status;
+  message msg;
+
+  uint32_t irq_set = BIT(bit_no);
+
+  while (packet_counter > 0) {
+    /* Get a request message. */
+    if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
+      printf("driver_receive failed with: %d", r);
+      continue;
+    }
+    if (is_ipc_notify(ipc_status)) { /* received notification */
+      switch (_ENDPOINT_P(msg.m_source)) {
+        case HARDWARE: /* hardware interrupt notification */
+          if (msg.m_notify.interrupts & irq_set) {
+            mouse_ih();
+            if (size == 3) {
+              packet_parser(&pp);
+              mouse_print_packet(&pp);
+              size = 0;
+              --packet_counter;
+            }
+          }
+          break;
+        default:
+          break; /* no other notifications expected: do nothing */
+      }
+    }
+    else {
+      return 1;
+    }
+  }
+
+  if (mouse_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  //DISABLE DATA REPORTING
+  mouse_disable_data_rpt();
+
+  return 0;
+}
+
+int(mouse_test_remote)(uint16_t period, uint8_t cnt) {
+
+  int packet_counter = cnt;
+
+  while (packet_counter > 0) {
+
+    //SEND DATA PACKET REQUEST
+    mouse_read_data();
+
+    packet_parser(&pp);
+    mouse_print_packet(&pp);
+    size = 0;
+    --packet_counter;
+
+    tickdelay(micros_to_ticks(period * 1000));
+  }
+
+  //SET STREAM MODE
+  mouse_set_stream_mode();
+
+  //DISABLE DATA REPORTING
+  mouse_disable_data_rpt();
+
+  //Reset the KBC command byte to Minix's default value
+  uint8_t cmd_byte = minix_get_dflt_kbc_cmd_byte();
+  if (is_IBF_set()) {
+    return 1;
+  }
+  sys_outb(IN_BUF_KBC_CMD, 0x60);
+  if (is_IBF_set()) {
+    return 1;
+  }
+  sys_outb(IN_BUF_CMD_BYTE, cmd_byte); //write command byte
+
+  return 0;
+}
+
+int(mouse_test_async)(uint8_t idle_time) {
+
+  if (idle_time <= 0)
+    return 1;
+
+  //ENABLE DATA REPORTING
+  mouse_enable_data_rpt();
+
+  uint8_t timer_bit_no, mouse_bit_no, idle_seconds;
+  idle_seconds = idle_time;
+
+  if (timer_subscribe_int(&timer_bit_no) != 0) {
+    return 1;
+  }
+
+  if (mouse_subscribe_int(&mouse_bit_no) != 0) {
+    return 1;
+  }
+
+  int r, ipc_status;
+  message msg;
+
+  uint32_t irq_timer0 = BIT(timer_bit_no);
+  uint32_t irq_mouse = BIT(mouse_bit_no);
+
+  while (idle_seconds > 0) {
+    /* Get a request message. */
+    if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
+      printf("driver_receive failed with: %d", r);
+      continue;
+    }
+    if (is_ipc_notify(ipc_status)) { /* received notification */
+      switch (_ENDPOINT_P(msg.m_source)) {
+        case HARDWARE: /* hardware interrupt notification */
+          if (msg.m_notify.interrupts & irq_timer0) {
+            timer_int_handler();
+            if (counter % 60 == 0)
+              --idle_seconds;
+          }
+          if (msg.m_notify.interrupts & irq_mouse) {
+            counter = 0;
+            idle_seconds = idle_time;
+            mouse_ih();
+            if (size == 3) {
+              packet_parser(&pp);
+              mouse_print_packet(&pp);
+              size = 0;
+            }
+          }
+          break;
+        default:
+          break; /* no other notifications expected: do nothing */
+      }
+    }
+    else {
+      return 1;
+    }
+  }
+
+  if (timer_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  if (mouse_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  //DISABLE DATA REPORTING
+  mouse_disable_data_rpt();
+
+  return 0;
+}
+
+int(mouse_test_gesture)(uint8_t x_len, uint8_t tolerance) {
+
+  //ENABLE DATA REPORTING
+  mouse_enable_data_rpt();
+
+  uint8_t bit_no;
+
+  if (mouse_subscribe_int(&bit_no) != 0) {
+    return 1;
+  }
+
+  int r, ipc_status;
+  message msg;
+
+  uint32_t irq_set = BIT(bit_no);
+
+  int logicalAndState = INITIAL_STATE;
+
+  while (logicalAndState != FINAL_STATE) {
+    /* Get a request message. */
+    if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
+      printf("driver_receive failed with: %d", r);
+      continue;
+    }
+    if (is_ipc_notify(ipc_status)) { /* received notification */
+      switch (_ENDPOINT_P(msg.m_source)) {
+        case HARDWARE: /* hardware interrupt notification */
+          if (msg.m_notify.interrupts & irq_set) {
+            mouse_ih();
+            if (size == 3) {
+              packet_parser(&pp);
+              mouse_print_packet(&pp);
+              logicalAndState = update_gesture_state(pp, logicalAndState, x_len, tolerance);
+              size = 0;
+            }
+          }
+          break;
+        default:
+          break; /* no other notifications expected: do nothing */
+      }
+    }
+    else {
+      return 1;
+    }
+  }
+
+  if (mouse_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  //DISABLE DATA REPORTING
+  mouse_disable_data_rpt();
+
+  return 0;
+}

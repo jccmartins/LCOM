@@ -1,0 +1,5 @@
+<map id="mouse_command" name="mouse_command">
+<area shape="rect" id="node2" href="$group__mouse.html#gae5173853c368d50dd463f5c72a63ded9" title="Checks if IBF is set &#160;&#160;Checks a maximum of 5 times and returns 0 if IBF is not set, otherwise returns 1 if after 5 tries IBF is always set. " alt="" coords="181,5,267,32"/>
+<area shape="rect" id="node3" href="$utils_8c.html#a79a031a8611f5b2d6afa4158e92b0fb4" title="util_sys_inb" alt="" coords="317,56,408,83"/>
+<area shape="rect" id="node4" href="$group__mouse.html#ga3a67eb6eb302f8140a3a6d16d40c86af" title="Checks if OBF is set &#160;&#160;Checks a maximum of 5 times and returns 0 if OBF is set, otherwise returns 1 i..." alt="" coords="179,107,269,133"/>
+</map>

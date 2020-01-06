@@ -1,0 +1,621 @@
+\hypertarget{group__rtc}{}\section{rtc}
+\label{group__rtc}\index{rtc@{rtc}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTime}{Time}
+\begin{DoxyCompactList}\small\item\em Stores hours, minutes and seconds of the R\+TC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__rtc_ga4e22feb6ffbc1cda32fadff5c740dc51}{R\+T\+C\+\_\+\+I\+RQ}~8
+\begin{DoxyCompactList}\small\item\em R\+TC I\+RQ line. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga710b98232df2c563009e6f8a6cd18220}{R\+T\+C\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG}~0x70
+\begin{DoxyCompactList}\small\item\em R\+TC register address. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga2f258a00c59c3f347c8d2d4a75471ce0}{R\+T\+C\+\_\+\+D\+A\+T\+A\+\_\+\+R\+EG}~0x71
+\begin{DoxyCompactList}\small\item\em R\+TC data address. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_gaa0e40d1cb9fea79e800aa79b8ca291f7}{R\+E\+G\+\_\+A}~0x0A
+\begin{DoxyCompactList}\small\item\em Register A of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga28ed75c6727784e56c2bb8d828c876c9}{R\+E\+G\+\_\+B}~0x0B
+\begin{DoxyCompactList}\small\item\em Register B of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga088e580de0961d5f30eb3366f97b324c}{R\+E\+G\+\_\+C}~0x0C
+\begin{DoxyCompactList}\small\item\em Register C of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga48fcf4f2eeef6769d588168d4ac2ab0e}{S\+E\+C\+O\+N\+DS}~0x00
+\begin{DoxyCompactList}\small\item\em Seconds Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga59d336dbc295731898ece988d0ebbb8e}{S\+E\+C\+O\+N\+D\+S\+\_\+\+A\+L\+A\+RM}~0x01
+\begin{DoxyCompactList}\small\item\em Seconds Alarm Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga84be9dcfa5a172ee83121620d15c8e29}{M\+I\+N\+U\+T\+ES}~0x02
+\begin{DoxyCompactList}\small\item\em Minutes Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_gadc030279159b8e16a47d21e393547689}{M\+I\+N\+U\+T\+E\+S\+\_\+\+A\+L\+A\+RM}~0x03
+\begin{DoxyCompactList}\small\item\em Minutes Alarm Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga212d0f839f6f7ca43ccde311f93d5892}{H\+O\+U\+RS}~0x04
+\begin{DoxyCompactList}\small\item\em Hours Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_gadc7e10d9ad06a95f30c5272967989e04}{H\+O\+U\+R\+S\+\_\+\+A\+L\+A\+RM}~0x05
+\begin{DoxyCompactList}\small\item\em Hours Alarm Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_gacd522b0e92d01c9bb65527206fc17508}{D\+A\+Y\+\_\+\+W\+E\+EK}~0x06
+\begin{DoxyCompactList}\small\item\em Day of the week Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_gaa652d6d52e8e86bfd3659f873c87a340}{D\+A\+Y\+\_\+\+M\+O\+N\+TH}~0x07
+\begin{DoxyCompactList}\small\item\em Day of the month Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga3729d06495d9713592f79f3122c9e677}{M\+O\+N\+TH}~0x08
+\begin{DoxyCompactList}\small\item\em Month Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga5871356500f559add06ea81d60331b1b}{Y\+E\+AR}~0x09
+\begin{DoxyCompactList}\small\item\em Year Register of the R\+TC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga3289eebd69837790d4aacaccd18d46db}{U\+IP}~B\+IT(7)
+\begin{DoxyCompactList}\small\item\em Update in progress flag of Register A. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga59da1d65e87a723efe808dbabb4fc205}{S\+ET}~B\+IT(7)
+\begin{DoxyCompactList}\small\item\em S\+ET bit of Register B -\/ if set inhibit updates of time/date registers. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_gac40c2b49eb51e2adc237b530adfcadf4}{P\+IE}~B\+IT(6)
+\begin{DoxyCompactList}\small\item\em Periodic Interrupts. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga113847820d539c6a6836993b84d22800}{A\+IE}~B\+IT(5)
+\begin{DoxyCompactList}\small\item\em Alarm Interrupts. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga2c276876faf62c1b29fe2383ce4ccfda}{U\+IE}~B\+IT(4)
+\begin{DoxyCompactList}\small\item\em Update Interrupts. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_gaa0e278c26c25558741febfadd7216caa}{PF}~B\+IT(6)
+\begin{DoxyCompactList}\small\item\em Periodic Interrupt Pending. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga76ba789cde9c36cd57dbb390bdee7661}{AF}~B\+IT(5)
+\begin{DoxyCompactList}\small\item\em Alarm Interrupt Pending. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__rtc_ga2657a76f02e47fa3f3320fa9c6353f31}{UF}~B\+IT(4)
+\begin{DoxyCompactList}\small\item\em Update Interrupt Pending. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \hyperlink{group__rtc_ga6bbe679f115cec90d36d50eb2aac1b89}{rtc\+\_\+subscribe\+\_\+int} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribe R\+TC interrupts. \end{DoxyCompactList}\item 
+void() \hyperlink{group__rtc_ga298c9a14801d124c4b3a61a7dd0dc5f6}{set\+\_\+rtc\+\_\+interrupts} ()
+\begin{DoxyCompactList}\small\item\em Set Alarm and Update Interrupts of the R\+TC. \end{DoxyCompactList}\item 
+void() \hyperlink{group__rtc_ga48e4065b3387c3e8c78a1e114c73554e}{set\+\_\+alarm\+\_\+seconds\+\_\+after} (uint32\+\_\+t hours, uint32\+\_\+t minutes, uint32\+\_\+t seconds, uint32\+\_\+t seconds\+\_\+after)
+\begin{DoxyCompactList}\small\item\em Set time of the alarm seconds after time specified in hours, minutes and seconds. \end{DoxyCompactList}\item 
+int() \hyperlink{group__rtc_ga9d4850bb2a488644672d43287f160622}{rtc\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribe R\+TC interrupts. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \hyperlink{group__rtc_ga11fd18e1bdb318485926015c12a8ef15}{bcd\+\_\+to\+\_\+decimal} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Returns a decimal number converted from binary-\/coded decimal. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__rtc_ga2e0029ef8fd7e11a5189b0bc4634a2c7}{decimal\+\_\+to\+\_\+bcd} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Returns a binary-\/coded number converted from decimal. \end{DoxyCompactList}\item 
+int() \hyperlink{group__rtc_ga51db428cbafeba59111359b236ed248a}{get\+Hours} ()
+\begin{DoxyCompactList}\small\item\em Returns hours from the R\+TC. \end{DoxyCompactList}\item 
+int() \hyperlink{group__rtc_gad64e3c6015d2b7c99c50817798309d52}{get\+Minutes} ()
+\begin{DoxyCompactList}\small\item\em Returns minutes from the R\+TC. \end{DoxyCompactList}\item 
+int() \hyperlink{group__rtc_ga03144495c6cd7841203162b527998b53}{get\+Seconds} ()
+\begin{DoxyCompactList}\small\item\em Returns seconds from the R\+TC. \end{DoxyCompactList}\item 
+void() \hyperlink{group__rtc_ga0b9ae809cf571f61e54712a23c65348e}{rtc\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em R\+TC interrupt handler. \end{DoxyCompactList}\item 
+void() \hyperlink{group__rtc_ga9f92f313c3714cb364715862d8737cd4}{handle\+\_\+update\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Handles update interrupts. \end{DoxyCompactList}\item 
+void() \hyperlink{group__rtc_ga3cda919fc58bfbb8b4d08c54954d8fec}{handle\+\_\+alarm\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Handles alarm interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__rtc_gaa207ff7d820b4c32f22e1474a931b195}{Time\+::hours}
+\item 
+int \hyperlink{group__rtc_gacdca8b13b904057dfec90b68f3092bc4}{Time\+::minutes}
+\item 
+int \hyperlink{group__rtc_ga4eda0725cd2272762ceae3336ca07db6}{Time\+::seconds}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Constants and functions for the R\+TC.
+
+\begin{DoxyAuthor}{Author}
+João Carlos Carreira Martins 
+
+João Francisco de Pinho Brandão 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__rtc_ga76ba789cde9c36cd57dbb390bdee7661}\label{group__rtc_ga76ba789cde9c36cd57dbb390bdee7661}} 
+\index{rtc@{rtc}!AF@{AF}}
+\index{AF@{AF}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{AF}{AF}}
+{\footnotesize\ttfamily \#define AF~B\+IT(5)}
+
+
+
+Alarm Interrupt Pending. 
+
+\mbox{\Hypertarget{group__rtc_ga113847820d539c6a6836993b84d22800}\label{group__rtc_ga113847820d539c6a6836993b84d22800}} 
+\index{rtc@{rtc}!A\+IE@{A\+IE}}
+\index{A\+IE@{A\+IE}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{A\+IE}{AIE}}
+{\footnotesize\ttfamily \#define A\+IE~B\+IT(5)}
+
+
+
+Alarm Interrupts. 
+
+\mbox{\Hypertarget{group__rtc_gaa652d6d52e8e86bfd3659f873c87a340}\label{group__rtc_gaa652d6d52e8e86bfd3659f873c87a340}} 
+\index{rtc@{rtc}!D\+A\+Y\+\_\+\+M\+O\+N\+TH@{D\+A\+Y\+\_\+\+M\+O\+N\+TH}}
+\index{D\+A\+Y\+\_\+\+M\+O\+N\+TH@{D\+A\+Y\+\_\+\+M\+O\+N\+TH}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{D\+A\+Y\+\_\+\+M\+O\+N\+TH}{DAY\_MONTH}}
+{\footnotesize\ttfamily \#define D\+A\+Y\+\_\+\+M\+O\+N\+TH~0x07}
+
+
+
+Day of the month Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_gacd522b0e92d01c9bb65527206fc17508}\label{group__rtc_gacd522b0e92d01c9bb65527206fc17508}} 
+\index{rtc@{rtc}!D\+A\+Y\+\_\+\+W\+E\+EK@{D\+A\+Y\+\_\+\+W\+E\+EK}}
+\index{D\+A\+Y\+\_\+\+W\+E\+EK@{D\+A\+Y\+\_\+\+W\+E\+EK}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{D\+A\+Y\+\_\+\+W\+E\+EK}{DAY\_WEEK}}
+{\footnotesize\ttfamily \#define D\+A\+Y\+\_\+\+W\+E\+EK~0x06}
+
+
+
+Day of the week Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_ga212d0f839f6f7ca43ccde311f93d5892}\label{group__rtc_ga212d0f839f6f7ca43ccde311f93d5892}} 
+\index{rtc@{rtc}!H\+O\+U\+RS@{H\+O\+U\+RS}}
+\index{H\+O\+U\+RS@{H\+O\+U\+RS}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{H\+O\+U\+RS}{HOURS}}
+{\footnotesize\ttfamily \#define H\+O\+U\+RS~0x04}
+
+
+
+Hours Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_gadc7e10d9ad06a95f30c5272967989e04}\label{group__rtc_gadc7e10d9ad06a95f30c5272967989e04}} 
+\index{rtc@{rtc}!H\+O\+U\+R\+S\+\_\+\+A\+L\+A\+RM@{H\+O\+U\+R\+S\+\_\+\+A\+L\+A\+RM}}
+\index{H\+O\+U\+R\+S\+\_\+\+A\+L\+A\+RM@{H\+O\+U\+R\+S\+\_\+\+A\+L\+A\+RM}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{H\+O\+U\+R\+S\+\_\+\+A\+L\+A\+RM}{HOURS\_ALARM}}
+{\footnotesize\ttfamily \#define H\+O\+U\+R\+S\+\_\+\+A\+L\+A\+RM~0x05}
+
+
+
+Hours Alarm Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_ga84be9dcfa5a172ee83121620d15c8e29}\label{group__rtc_ga84be9dcfa5a172ee83121620d15c8e29}} 
+\index{rtc@{rtc}!M\+I\+N\+U\+T\+ES@{M\+I\+N\+U\+T\+ES}}
+\index{M\+I\+N\+U\+T\+ES@{M\+I\+N\+U\+T\+ES}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{M\+I\+N\+U\+T\+ES}{MINUTES}}
+{\footnotesize\ttfamily \#define M\+I\+N\+U\+T\+ES~0x02}
+
+
+
+Minutes Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_gadc030279159b8e16a47d21e393547689}\label{group__rtc_gadc030279159b8e16a47d21e393547689}} 
+\index{rtc@{rtc}!M\+I\+N\+U\+T\+E\+S\+\_\+\+A\+L\+A\+RM@{M\+I\+N\+U\+T\+E\+S\+\_\+\+A\+L\+A\+RM}}
+\index{M\+I\+N\+U\+T\+E\+S\+\_\+\+A\+L\+A\+RM@{M\+I\+N\+U\+T\+E\+S\+\_\+\+A\+L\+A\+RM}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{M\+I\+N\+U\+T\+E\+S\+\_\+\+A\+L\+A\+RM}{MINUTES\_ALARM}}
+{\footnotesize\ttfamily \#define M\+I\+N\+U\+T\+E\+S\+\_\+\+A\+L\+A\+RM~0x03}
+
+
+
+Minutes Alarm Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_ga3729d06495d9713592f79f3122c9e677}\label{group__rtc_ga3729d06495d9713592f79f3122c9e677}} 
+\index{rtc@{rtc}!M\+O\+N\+TH@{M\+O\+N\+TH}}
+\index{M\+O\+N\+TH@{M\+O\+N\+TH}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{M\+O\+N\+TH}{MONTH}}
+{\footnotesize\ttfamily \#define M\+O\+N\+TH~0x08}
+
+
+
+Month Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_gaa0e278c26c25558741febfadd7216caa}\label{group__rtc_gaa0e278c26c25558741febfadd7216caa}} 
+\index{rtc@{rtc}!PF@{PF}}
+\index{PF@{PF}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{PF}{PF}}
+{\footnotesize\ttfamily \#define PF~B\+IT(6)}
+
+
+
+Periodic Interrupt Pending. 
+
+\mbox{\Hypertarget{group__rtc_gac40c2b49eb51e2adc237b530adfcadf4}\label{group__rtc_gac40c2b49eb51e2adc237b530adfcadf4}} 
+\index{rtc@{rtc}!P\+IE@{P\+IE}}
+\index{P\+IE@{P\+IE}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{P\+IE}{PIE}}
+{\footnotesize\ttfamily \#define P\+IE~B\+IT(6)}
+
+
+
+Periodic Interrupts. 
+
+\mbox{\Hypertarget{group__rtc_gaa0e40d1cb9fea79e800aa79b8ca291f7}\label{group__rtc_gaa0e40d1cb9fea79e800aa79b8ca291f7}} 
+\index{rtc@{rtc}!R\+E\+G\+\_\+A@{R\+E\+G\+\_\+A}}
+\index{R\+E\+G\+\_\+A@{R\+E\+G\+\_\+A}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{R\+E\+G\+\_\+A}{REG\_A}}
+{\footnotesize\ttfamily \#define R\+E\+G\+\_\+A~0x0A}
+
+
+
+Register A of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_ga28ed75c6727784e56c2bb8d828c876c9}\label{group__rtc_ga28ed75c6727784e56c2bb8d828c876c9}} 
+\index{rtc@{rtc}!R\+E\+G\+\_\+B@{R\+E\+G\+\_\+B}}
+\index{R\+E\+G\+\_\+B@{R\+E\+G\+\_\+B}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{R\+E\+G\+\_\+B}{REG\_B}}
+{\footnotesize\ttfamily \#define R\+E\+G\+\_\+B~0x0B}
+
+
+
+Register B of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_ga088e580de0961d5f30eb3366f97b324c}\label{group__rtc_ga088e580de0961d5f30eb3366f97b324c}} 
+\index{rtc@{rtc}!R\+E\+G\+\_\+C@{R\+E\+G\+\_\+C}}
+\index{R\+E\+G\+\_\+C@{R\+E\+G\+\_\+C}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{R\+E\+G\+\_\+C}{REG\_C}}
+{\footnotesize\ttfamily \#define R\+E\+G\+\_\+C~0x0C}
+
+
+
+Register C of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_ga710b98232df2c563009e6f8a6cd18220}\label{group__rtc_ga710b98232df2c563009e6f8a6cd18220}} 
+\index{rtc@{rtc}!R\+T\+C\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG}}
+\index{R\+T\+C\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG}{RTC\_ADDR\_REG}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+D\+D\+R\+\_\+\+R\+EG~0x70}
+
+
+
+R\+TC register address. 
+
+\mbox{\Hypertarget{group__rtc_ga2f258a00c59c3f347c8d2d4a75471ce0}\label{group__rtc_ga2f258a00c59c3f347c8d2d4a75471ce0}} 
+\index{rtc@{rtc}!R\+T\+C\+\_\+\+D\+A\+T\+A\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+D\+A\+T\+A\+\_\+\+R\+EG}}
+\index{R\+T\+C\+\_\+\+D\+A\+T\+A\+\_\+\+R\+EG@{R\+T\+C\+\_\+\+D\+A\+T\+A\+\_\+\+R\+EG}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+D\+A\+T\+A\+\_\+\+R\+EG}{RTC\_DATA\_REG}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+D\+A\+T\+A\+\_\+\+R\+EG~0x71}
+
+
+
+R\+TC data address. 
+
+\mbox{\Hypertarget{group__rtc_ga4e22feb6ffbc1cda32fadff5c740dc51}\label{group__rtc_ga4e22feb6ffbc1cda32fadff5c740dc51}} 
+\index{rtc@{rtc}!R\+T\+C\+\_\+\+I\+RQ@{R\+T\+C\+\_\+\+I\+RQ}}
+\index{R\+T\+C\+\_\+\+I\+RQ@{R\+T\+C\+\_\+\+I\+RQ}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{R\+T\+C\+\_\+\+I\+RQ}{RTC\_IRQ}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+I\+RQ~8}
+
+
+
+R\+TC I\+RQ line. 
+
+\mbox{\Hypertarget{group__rtc_ga48fcf4f2eeef6769d588168d4ac2ab0e}\label{group__rtc_ga48fcf4f2eeef6769d588168d4ac2ab0e}} 
+\index{rtc@{rtc}!S\+E\+C\+O\+N\+DS@{S\+E\+C\+O\+N\+DS}}
+\index{S\+E\+C\+O\+N\+DS@{S\+E\+C\+O\+N\+DS}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{S\+E\+C\+O\+N\+DS}{SECONDS}}
+{\footnotesize\ttfamily \#define S\+E\+C\+O\+N\+DS~0x00}
+
+
+
+Seconds Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_ga59d336dbc295731898ece988d0ebbb8e}\label{group__rtc_ga59d336dbc295731898ece988d0ebbb8e}} 
+\index{rtc@{rtc}!S\+E\+C\+O\+N\+D\+S\+\_\+\+A\+L\+A\+RM@{S\+E\+C\+O\+N\+D\+S\+\_\+\+A\+L\+A\+RM}}
+\index{S\+E\+C\+O\+N\+D\+S\+\_\+\+A\+L\+A\+RM@{S\+E\+C\+O\+N\+D\+S\+\_\+\+A\+L\+A\+RM}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{S\+E\+C\+O\+N\+D\+S\+\_\+\+A\+L\+A\+RM}{SECONDS\_ALARM}}
+{\footnotesize\ttfamily \#define S\+E\+C\+O\+N\+D\+S\+\_\+\+A\+L\+A\+RM~0x01}
+
+
+
+Seconds Alarm Register of the R\+TC. 
+
+\mbox{\Hypertarget{group__rtc_ga59da1d65e87a723efe808dbabb4fc205}\label{group__rtc_ga59da1d65e87a723efe808dbabb4fc205}} 
+\index{rtc@{rtc}!S\+ET@{S\+ET}}
+\index{S\+ET@{S\+ET}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{S\+ET}{SET}}
+{\footnotesize\ttfamily \#define S\+ET~B\+IT(7)}
+
+
+
+S\+ET bit of Register B -\/ if set inhibit updates of time/date registers. 
+
+\mbox{\Hypertarget{group__rtc_ga2657a76f02e47fa3f3320fa9c6353f31}\label{group__rtc_ga2657a76f02e47fa3f3320fa9c6353f31}} 
+\index{rtc@{rtc}!UF@{UF}}
+\index{UF@{UF}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{UF}{UF}}
+{\footnotesize\ttfamily \#define UF~B\+IT(4)}
+
+
+
+Update Interrupt Pending. 
+
+\mbox{\Hypertarget{group__rtc_ga2c276876faf62c1b29fe2383ce4ccfda}\label{group__rtc_ga2c276876faf62c1b29fe2383ce4ccfda}} 
+\index{rtc@{rtc}!U\+IE@{U\+IE}}
+\index{U\+IE@{U\+IE}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{U\+IE}{UIE}}
+{\footnotesize\ttfamily \#define U\+IE~B\+IT(4)}
+
+
+
+Update Interrupts. 
+
+\mbox{\Hypertarget{group__rtc_ga3289eebd69837790d4aacaccd18d46db}\label{group__rtc_ga3289eebd69837790d4aacaccd18d46db}} 
+\index{rtc@{rtc}!U\+IP@{U\+IP}}
+\index{U\+IP@{U\+IP}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{U\+IP}{UIP}}
+{\footnotesize\ttfamily \#define U\+IP~B\+IT(7)}
+
+
+
+Update in progress flag of Register A. 
+
+\mbox{\Hypertarget{group__rtc_ga5871356500f559add06ea81d60331b1b}\label{group__rtc_ga5871356500f559add06ea81d60331b1b}} 
+\index{rtc@{rtc}!Y\+E\+AR@{Y\+E\+AR}}
+\index{Y\+E\+AR@{Y\+E\+AR}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{Y\+E\+AR}{YEAR}}
+{\footnotesize\ttfamily \#define Y\+E\+AR~0x09}
+
+
+
+Year Register of the R\+TC. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__rtc_ga11fd18e1bdb318485926015c12a8ef15}\label{group__rtc_ga11fd18e1bdb318485926015c12a8ef15}} 
+\index{rtc@{rtc}!bcd\+\_\+to\+\_\+decimal@{bcd\+\_\+to\+\_\+decimal}}
+\index{bcd\+\_\+to\+\_\+decimal@{bcd\+\_\+to\+\_\+decimal}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{bcd\+\_\+to\+\_\+decimal()}{bcd\_to\_decimal()}}
+{\footnotesize\ttfamily uint32\+\_\+t() bcd\+\_\+to\+\_\+decimal (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Returns a decimal number converted from binary-\/coded decimal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ binary-\/coded decimal to be converted \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga11fd18e1bdb318485926015c12a8ef15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_ga2e0029ef8fd7e11a5189b0bc4634a2c7}\label{group__rtc_ga2e0029ef8fd7e11a5189b0bc4634a2c7}} 
+\index{rtc@{rtc}!decimal\+\_\+to\+\_\+bcd@{decimal\+\_\+to\+\_\+bcd}}
+\index{decimal\+\_\+to\+\_\+bcd@{decimal\+\_\+to\+\_\+bcd}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{decimal\+\_\+to\+\_\+bcd()}{decimal\_to\_bcd()}}
+{\footnotesize\ttfamily uint32\+\_\+t decimal\+\_\+to\+\_\+bcd (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Returns a binary-\/coded number converted from decimal. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & -\/ decimal number to be converted \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga2e0029ef8fd7e11a5189b0bc4634a2c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_ga51db428cbafeba59111359b236ed248a}\label{group__rtc_ga51db428cbafeba59111359b236ed248a}} 
+\index{rtc@{rtc}!get\+Hours@{get\+Hours}}
+\index{get\+Hours@{get\+Hours}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{get\+Hours()}{getHours()}}
+{\footnotesize\ttfamily int() get\+Hours (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns hours from the R\+TC. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{group__rtc_ga51db428cbafeba59111359b236ed248a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga51db428cbafeba59111359b236ed248a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_gad64e3c6015d2b7c99c50817798309d52}\label{group__rtc_gad64e3c6015d2b7c99c50817798309d52}} 
+\index{rtc@{rtc}!get\+Minutes@{get\+Minutes}}
+\index{get\+Minutes@{get\+Minutes}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{get\+Minutes()}{getMinutes()}}
+{\footnotesize\ttfamily int() get\+Minutes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns minutes from the R\+TC. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{group__rtc_gad64e3c6015d2b7c99c50817798309d52_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_gad64e3c6015d2b7c99c50817798309d52_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_ga03144495c6cd7841203162b527998b53}\label{group__rtc_ga03144495c6cd7841203162b527998b53}} 
+\index{rtc@{rtc}!get\+Seconds@{get\+Seconds}}
+\index{get\+Seconds@{get\+Seconds}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{get\+Seconds()}{getSeconds()}}
+{\footnotesize\ttfamily int() get\+Seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns seconds from the R\+TC. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{group__rtc_ga03144495c6cd7841203162b527998b53_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga03144495c6cd7841203162b527998b53_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_ga3cda919fc58bfbb8b4d08c54954d8fec}\label{group__rtc_ga3cda919fc58bfbb8b4d08c54954d8fec}} 
+\index{rtc@{rtc}!handle\+\_\+alarm\+\_\+int@{handle\+\_\+alarm\+\_\+int}}
+\index{handle\+\_\+alarm\+\_\+int@{handle\+\_\+alarm\+\_\+int}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{handle\+\_\+alarm\+\_\+int()}{handle\_alarm\_int()}}
+{\footnotesize\ttfamily void() handle\+\_\+alarm\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles alarm interrupts. 
+
+\mbox{\Hypertarget{group__rtc_ga9f92f313c3714cb364715862d8737cd4}\label{group__rtc_ga9f92f313c3714cb364715862d8737cd4}} 
+\index{rtc@{rtc}!handle\+\_\+update\+\_\+int@{handle\+\_\+update\+\_\+int}}
+\index{handle\+\_\+update\+\_\+int@{handle\+\_\+update\+\_\+int}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{handle\+\_\+update\+\_\+int()}{handle\_update\_int()}}
+{\footnotesize\ttfamily void() handle\+\_\+update\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Handles update interrupts. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga9f92f313c3714cb364715862d8737cd4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga9f92f313c3714cb364715862d8737cd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_ga0b9ae809cf571f61e54712a23c65348e}\label{group__rtc_ga0b9ae809cf571f61e54712a23c65348e}} 
+\index{rtc@{rtc}!rtc\+\_\+ih@{rtc\+\_\+ih}}
+\index{rtc\+\_\+ih@{rtc\+\_\+ih}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{rtc\+\_\+ih()}{rtc\_ih()}}
+{\footnotesize\ttfamily void() rtc\+\_\+ih (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+R\+TC interrupt handler. 
+
+\mbox{\Hypertarget{group__rtc_ga6bbe679f115cec90d36d50eb2aac1b89}\label{group__rtc_ga6bbe679f115cec90d36d50eb2aac1b89}} 
+\index{rtc@{rtc}!rtc\+\_\+subscribe\+\_\+int@{rtc\+\_\+subscribe\+\_\+int}}
+\index{rtc\+\_\+subscribe\+\_\+int@{rtc\+\_\+subscribe\+\_\+int}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{rtc\+\_\+subscribe\+\_\+int()}{rtc\_subscribe\_int()}}
+{\footnotesize\ttfamily int() rtc\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{bit\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+Subscribe R\+TC interrupts. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga6bbe679f115cec90d36d50eb2aac1b89_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_ga9d4850bb2a488644672d43287f160622}\label{group__rtc_ga9d4850bb2a488644672d43287f160622}} 
+\index{rtc@{rtc}!rtc\+\_\+unsubscribe\+\_\+int@{rtc\+\_\+unsubscribe\+\_\+int}}
+\index{rtc\+\_\+unsubscribe\+\_\+int@{rtc\+\_\+unsubscribe\+\_\+int}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{rtc\+\_\+unsubscribe\+\_\+int()}{rtc\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int() rtc\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribe R\+TC interrupts. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga9d4850bb2a488644672d43287f160622_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_ga48e4065b3387c3e8c78a1e114c73554e}\label{group__rtc_ga48e4065b3387c3e8c78a1e114c73554e}} 
+\index{rtc@{rtc}!set\+\_\+alarm\+\_\+seconds\+\_\+after@{set\+\_\+alarm\+\_\+seconds\+\_\+after}}
+\index{set\+\_\+alarm\+\_\+seconds\+\_\+after@{set\+\_\+alarm\+\_\+seconds\+\_\+after}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{set\+\_\+alarm\+\_\+seconds\+\_\+after()}{set\_alarm\_seconds\_after()}}
+{\footnotesize\ttfamily void() set\+\_\+alarm\+\_\+seconds\+\_\+after (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{hours,  }\item[{uint32\+\_\+t}]{minutes,  }\item[{uint32\+\_\+t}]{seconds,  }\item[{uint32\+\_\+t}]{seconds\+\_\+after }\end{DoxyParamCaption})}
+
+
+
+Set time of the alarm seconds after time specified in hours, minutes and seconds. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{group__rtc_ga48e4065b3387c3e8c78a1e114c73554e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga48e4065b3387c3e8c78a1e114c73554e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__rtc_ga298c9a14801d124c4b3a61a7dd0dc5f6}\label{group__rtc_ga298c9a14801d124c4b3a61a7dd0dc5f6}} 
+\index{rtc@{rtc}!set\+\_\+rtc\+\_\+interrupts@{set\+\_\+rtc\+\_\+interrupts}}
+\index{set\+\_\+rtc\+\_\+interrupts@{set\+\_\+rtc\+\_\+interrupts}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{set\+\_\+rtc\+\_\+interrupts()}{set\_rtc\_interrupts()}}
+{\footnotesize\ttfamily void() set\+\_\+rtc\+\_\+interrupts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Set Alarm and Update Interrupts of the R\+TC. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__rtc_ga298c9a14801d124c4b3a61a7dd0dc5f6_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__rtc_gaa207ff7d820b4c32f22e1474a931b195}\label{group__rtc_gaa207ff7d820b4c32f22e1474a931b195}} 
+\index{rtc@{rtc}!hours@{hours}}
+\index{hours@{hours}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{hours}{hours}}
+{\footnotesize\ttfamily int Time\+::hours}
+
+\mbox{\Hypertarget{group__rtc_gacdca8b13b904057dfec90b68f3092bc4}\label{group__rtc_gacdca8b13b904057dfec90b68f3092bc4}} 
+\index{rtc@{rtc}!minutes@{minutes}}
+\index{minutes@{minutes}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{minutes}{minutes}}
+{\footnotesize\ttfamily int Time\+::minutes}
+
+\mbox{\Hypertarget{group__rtc_ga4eda0725cd2272762ceae3336ca07db6}\label{group__rtc_ga4eda0725cd2272762ceae3336ca07db6}} 
+\index{rtc@{rtc}!seconds@{seconds}}
+\index{seconds@{seconds}!rtc@{rtc}}
+\subsubsection{\texorpdfstring{seconds}{seconds}}
+{\footnotesize\ttfamily int Time\+::seconds}
+

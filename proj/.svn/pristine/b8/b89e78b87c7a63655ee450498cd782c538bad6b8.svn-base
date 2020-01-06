@@ -1,0 +1,9 @@
+<map id="bcd_to_decimal" name="bcd_to_decimal">
+<area shape="rect" id="node2" href="$group__rtc.html#ga51db428cbafeba59111359b236ed248a" title="Returns hours from the RTC. " alt="" coords="175,5,249,32"/>
+<area shape="rect" id="node7" href="$group__rtc.html#gad64e3c6015d2b7c99c50817798309d52" title="Returns minutes from the RTC. " alt="" coords="169,56,255,83"/>
+<area shape="rect" id="node8" href="$group__rtc.html#ga03144495c6cd7841203162b527998b53" title="Returns seconds from the RTC. " alt="" coords="167,107,257,133"/>
+<area shape="rect" id="node3" href="$group__rtc.html#ga9f92f313c3714cb364715862d8737cd4" title="Handles update interrupts. " alt="" coords="305,56,432,83"/>
+<area shape="rect" id="node4" href="$rtc_8c.html#aa92511e4508179a73fd0a074fa007c78" title="rtc_ih" alt="" coords="480,56,535,83"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="583,56,668,83"/>
+<area shape="rect" id="node6" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="716,56,825,83"/>
+</map>

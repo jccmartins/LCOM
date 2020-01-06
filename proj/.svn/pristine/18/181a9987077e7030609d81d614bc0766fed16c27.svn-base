@@ -1,0 +1,43 @@
+#include "rtc.h"
+
+uint32_t(bcd_to_decimal)(uint32_t value)
+{
+    return ((value / 16 * 10) + (value % 16));
+}
+
+void(wait_valid_rtc)()
+{
+    uint32_t regA = 0;
+
+    do
+    {
+        // disable();
+        sys_outb(RTC_ADDR_REG, REG_A);
+        sys_inb(RTC_DATA_REG, &regA);
+        // enable();
+    } while (regA & UIP);
+}
+
+int(getHours)()
+{
+    uint32_t hours;
+    sys_outb(RTC_ADDR_REG, HOURS);
+    sys_inb(RTC_DATA_REG, &hours);
+    return bcd_to_decimal(hours);
+}
+
+int(getMinutes)()
+{
+    uint32_t minutes;
+    sys_outb(RTC_ADDR_REG, MINUTES);
+    sys_inb(RTC_DATA_REG, &minutes);
+    return bcd_to_decimal(minutes);
+}
+
+int(getSeconds)()
+{
+    uint32_t seconds;
+    sys_outb(RTC_ADDR_REG, SECONDS);
+    sys_inb(RTC_DATA_REG, &seconds);
+    return bcd_to_decimal(seconds);
+}

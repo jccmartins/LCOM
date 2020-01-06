@@ -1,0 +1,136 @@
+\hypertarget{proj_8c}{}\section{proj.\+c File Reference}
+\label{proj_8c}\index{proj.\+c@{proj.\+c}}
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/liblm.\+h$>$}\newline
+{\ttfamily \#include $<$lcom/proj.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}snake.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+Include dependency graph for proj.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{proj_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+static int \hyperlink{proj_8c_ae630693cc739fd548aba5b3bf320bfed}{print\+\_\+usage} ()
+\item 
+int() \hyperlink{proj_8c_a649a26d3c9953d9f2af863e859e0c40d}{game\+\_\+loop} ()
+\item 
+int() \hyperlink{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}{proj\+\_\+main\+\_\+loop} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structTime}{Time} $\ast$ \hyperlink{proj_8c_aeff6413b7331c7e06f7cf170d8462575}{rtc\+\_\+time}
+\item 
+int \hyperlink{proj_8c_a617a47c70795bcff659815ad0efd2266}{counter}
+\item 
+uint8\+\_\+t \hyperlink{proj_8c_a96f44d20f1dbf1c8785a7bc99a46164c}{byte}
+\item 
+struct packet \hyperlink{proj_8c_a26e83eca70c2b9169fbbb0eac7e32e32}{pp}
+\item 
+int \hyperlink{proj_8c_aeb7f9c874980618e0e90c985f7193ccd}{packet\+\_\+size}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{proj_8c_a649a26d3c9953d9f2af863e859e0c40d}\label{proj_8c_a649a26d3c9953d9f2af863e859e0c40d}} 
+\index{proj.\+c@{proj.\+c}!game\+\_\+loop@{game\+\_\+loop}}
+\index{game\+\_\+loop@{game\+\_\+loop}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+loop()}{game\_loop()}}
+{\footnotesize\ttfamily int() game\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{proj_8c_a649a26d3c9953d9f2af863e859e0c40d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{proj_8c_a649a26d3c9953d9f2af863e859e0c40d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{proj_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{proj.\+c@{proj.\+c}!main@{main}}
+\index{main@{main}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{proj_8c_ae630693cc739fd548aba5b3bf320bfed}\label{proj_8c_ae630693cc739fd548aba5b3bf320bfed}} 
+\index{proj.\+c@{proj.\+c}!print\+\_\+usage@{print\+\_\+usage}}
+\index{print\+\_\+usage@{print\+\_\+usage}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+usage()}{print\_usage()}}
+{\footnotesize\ttfamily static int print\+\_\+usage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{proj_8c_ae630693cc739fd548aba5b3bf320bfed_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}\label{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b}} 
+\index{proj.\+c@{proj.\+c}!proj\+\_\+main\+\_\+loop@{proj\+\_\+main\+\_\+loop}}
+\index{proj\+\_\+main\+\_\+loop@{proj\+\_\+main\+\_\+loop}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{proj\+\_\+main\+\_\+loop()}{proj\_main\_loop()}}
+{\footnotesize\ttfamily int() proj\+\_\+main\+\_\+loop (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{proj_8c_a2a16f651eccbd248e1ad3b3b924b143b_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{proj_8c_a96f44d20f1dbf1c8785a7bc99a46164c}\label{proj_8c_a96f44d20f1dbf1c8785a7bc99a46164c}} 
+\index{proj.\+c@{proj.\+c}!byte@{byte}}
+\index{byte@{byte}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{byte}{byte}}
+{\footnotesize\ttfamily uint8\+\_\+t byte}
+
+\mbox{\Hypertarget{proj_8c_a617a47c70795bcff659815ad0efd2266}\label{proj_8c_a617a47c70795bcff659815ad0efd2266}} 
+\index{proj.\+c@{proj.\+c}!counter@{counter}}
+\index{counter@{counter}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{counter}{counter}}
+{\footnotesize\ttfamily int counter}
+
+Game Loop \mbox{\Hypertarget{proj_8c_aeb7f9c874980618e0e90c985f7193ccd}\label{proj_8c_aeb7f9c874980618e0e90c985f7193ccd}} 
+\index{proj.\+c@{proj.\+c}!packet\+\_\+size@{packet\+\_\+size}}
+\index{packet\+\_\+size@{packet\+\_\+size}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{packet\+\_\+size}{packet\_size}}
+{\footnotesize\ttfamily int packet\+\_\+size}
+
+\mbox{\Hypertarget{proj_8c_a26e83eca70c2b9169fbbb0eac7e32e32}\label{proj_8c_a26e83eca70c2b9169fbbb0eac7e32e32}} 
+\index{proj.\+c@{proj.\+c}!pp@{pp}}
+\index{pp@{pp}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{pp}{pp}}
+{\footnotesize\ttfamily struct packet pp}
+
+\mbox{\Hypertarget{proj_8c_aeff6413b7331c7e06f7cf170d8462575}\label{proj_8c_aeff6413b7331c7e06f7cf170d8462575}} 
+\index{proj.\+c@{proj.\+c}!rtc\+\_\+time@{rtc\+\_\+time}}
+\index{rtc\+\_\+time@{rtc\+\_\+time}!proj.\+c@{proj.\+c}}
+\subsubsection{\texorpdfstring{rtc\+\_\+time}{rtc\_time}}
+{\footnotesize\ttfamily struct \hyperlink{structTime}{Time}$\ast$ rtc\+\_\+time}
+

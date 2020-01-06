@@ -1,0 +1,176 @@
+#include "snake.h"
+
+struct Snake *snake;
+uint16_t pixels_per_unit = 40;
+
+/**
+ * Create snake struct with size, score 0 and direction RIGHT
+ */
+void(create_snake)() {
+
+  int snake_size = 3;
+
+  snake = (struct Snake *) malloc(sizeof(struct Snake));
+  snake->direction = RIGHT;
+
+  struct Node *head = (struct Node *) malloc(sizeof(struct Node));
+
+  snake->head = head;
+
+  head->x = 3;
+  head->y = 7;
+  head->next = NULL;
+
+  struct Node *last = head;
+
+  for (int i = 2; i <= snake_size; i++) {
+    struct Node *next = (struct Node *) malloc(sizeof(struct Node));
+    next->x = last->x - 1;
+    next->y = last->y;
+    last->next = next;
+    if (i == snake_size) {
+      next->next = NULL;
+    }
+    else {
+      last = next;
+    }
+  }
+}
+
+bool(is_snake_at_end_of_map)() {
+
+  uint16_t xRes = get_xRes();
+  uint16_t yRes = get_yRes();
+
+  switch (snake->direction) {
+    case UP:
+      if ((snake->head->y * pixels_per_unit) <= 0) {
+        return true;
+      }
+      break;
+    case DOWN:
+      if (((snake->head->y + 1) * pixels_per_unit) >= yRes) {
+        return true;
+      }
+      break;
+    case LEFT:
+      if ((snake->head->x * pixels_per_unit) <= 0) {
+        return true;
+      }
+      break;
+    case RIGHT:
+      if (((snake->head->x + 1) * pixels_per_unit) >= xRes) {
+        return true;
+      }
+      break;
+    default:
+      break;
+  }
+
+  return false;
+}
+
+/**
+ * Move snake, basically creates a new head for the snake and deletes the last node
+ */
+void(move_snake)() {
+
+  struct Node *last = snake->head;
+  struct Node *aux;
+
+  while (last->next != NULL) {
+    aux = last;
+    last = last->next;
+  }
+
+  aux->next = NULL;
+
+  struct Node *newHead = (struct Node *) malloc(sizeof(struct Node));
+
+  switch (snake->direction) {
+    case UP:
+      if (is_snake_at_end_of_map()) {
+        newHead->x = snake->head->x;
+        newHead->y = (get_yRes() - 1) / pixels_per_unit;
+        newHead->next = snake->head;
+      }
+      else {
+        newHead->x = snake->head->x;
+        newHead->y = snake->head->y - 1;
+        newHead->next = snake->head;
+      }
+      break;
+    case DOWN:
+      if (is_snake_at_end_of_map()) {
+        newHead->x = snake->head->x;
+        newHead->y = 0;
+        newHead->next = snake->head;
+      }
+      else {
+        newHead->x = snake->head->x;
+        newHead->y = snake->head->y + 1;
+        newHead->next = snake->head;
+      }
+      break;
+    case LEFT:
+      if (is_snake_at_end_of_map()) {
+        newHead->x = (get_xRes() - 1) / pixels_per_unit;
+        newHead->y = snake->head->y;
+        newHead->next = snake->head;
+      }
+      else {
+        newHead->x = snake->head->x - 1;
+        newHead->y = snake->head->y;
+        newHead->next = snake->head;
+      }
+      break;
+    case RIGHT:
+      if (is_snake_at_end_of_map()) {
+        newHead->x = 0;
+        newHead->y = snake->head->y;
+        newHead->next = snake->head;
+      }
+      else {
+        newHead->x = snake->head->x + 1;
+        newHead->y = snake->head->y;
+        newHead->next = snake->head;
+      }
+      break;
+    default:
+      break;
+  }
+
+  snake->head = newHead;
+}
+
+/**
+ * Change snake direction, using keyboard arrows
+ */
+void(change_snake_direction)(uint8_t bytes[2]) {
+  if (bytes[0] == 0xe0) {
+    switch (bytes[1]) {
+      case UP_ARROW_MAKE:
+        if (snake->direction != DOWN) {
+          snake->direction = UP;
+        }
+        break;
+      case DOWN_ARROW_MAKE:
+        if (snake->direction != UP) {
+          snake->direction = DOWN;
+        }
+        break;
+      case LEFT_ARROW_MAKE:
+        if (snake->direction != RIGHT) {
+          snake->direction = LEFT;
+        }
+        break;
+      case RIGHT_ARROW_MAKE:
+        if (snake->direction != LEFT) {
+          snake->direction = RIGHT;
+        }
+        break;
+      default:
+        break;
+    }
+  }
+}

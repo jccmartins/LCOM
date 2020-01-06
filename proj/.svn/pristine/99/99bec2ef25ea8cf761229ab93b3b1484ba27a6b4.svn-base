@@ -1,0 +1,32 @@
+\hypertarget{structNode}{}\section{Node Struct Reference}
+\label{structNode}\index{Node@{Node}}
+
+
+Stores x and y coordinates and a struct node pointer.  
+
+
+
+
+{\ttfamily \#include $<$snake.\+h$>$}
+
+
+
+Collaboration diagram for Node\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries x}
+\item 
+int {\bfseries y}
+\item 
+struct \hyperlink{structNode}{Node} $\ast$ {\bfseries next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores x and y coordinates and a struct node pointer. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+snake.\+h\end{DoxyCompactItemize}

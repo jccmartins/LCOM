@@ -1,0 +1,7 @@
+<map id="vg_draw_rectangle" name="vg_draw_rectangle">
+<area shape="rect" id="node2" href="$group__graphics.html#ga3b11d835d79f07bc68a7411380ab079f" title="Draws map of the game. " alt="" coords="189,5,271,32"/>
+<area shape="rect" id="node6" href="$group__graphics.html#ga2a792507ffcbc0b1674663fdd2912146" title="Draws snake in the map. " alt="" coords="184,56,276,83"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a127e740651197e6a154719a76e031985" title="draw_scene" alt="" coords="324,31,416,57"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="464,31,549,57"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="597,31,707,57"/>
+</map>

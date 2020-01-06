@@ -1,0 +1,6 @@
+<map id="getMinutes" name="getMinutes">
+<area shape="rect" id="node2" href="$group__rtc.html#ga9f92f313c3714cb364715862d8737cd4" title="Handles update interrupts. " alt="" coords="140,5,267,32"/>
+<area shape="rect" id="node3" href="$rtc_8c.html#aa92511e4508179a73fd0a074fa007c78" title="rtc_ih" alt="" coords="315,5,369,32"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="417,5,503,32"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="551,5,660,32"/>
+</map>

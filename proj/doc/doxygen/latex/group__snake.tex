@@ -1,0 +1,281 @@
+\hypertarget{group__snake}{}\section{snake}
+\label{group__snake}\index{snake@{snake}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structNode}{Node}
+\begin{DoxyCompactList}\small\item\em Stores x and y coordinates and a struct node pointer. \end{DoxyCompactList}\item 
+struct \hyperlink{structSnake}{Snake}
+\begin{DoxyCompactList}\small\item\em Stores snake information. \end{DoxyCompactList}\item 
+struct \hyperlink{structApple}{Apple}
+\begin{DoxyCompactList}\small\item\em Stores apple position (x and y) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__snake_ga437ef08681e7210d6678427030446a54}{L\+E\+FT}~0
+\item 
+\#define \hyperlink{group__snake_ga1965eaca47dbf3f87acdafc2208f04eb}{UP}~1
+\item 
+\#define \hyperlink{group__snake_ga80fb826a684cf3f0d306b22aa100ddac}{R\+I\+G\+HT}~2
+\item 
+\#define \hyperlink{group__snake_ga4193cd1c8c2e6ebd0e056fa2364a663f}{D\+O\+WN}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \hyperlink{group__snake_ga1ae3641fd30af1df1253e07890eb5fd3}{create\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Create snake struct with size 4, score 0 and direction R\+I\+G\+HT. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_gaeb429d76c826d2c0620425031a995528}{is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Checks if snake is at the end of the map. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_ga019c20c4c67169ac20f2959a0697e89e}{snake\+\_\+apple\+\_\+collision} ()
+\begin{DoxyCompactList}\small\item\em Detects snake/apple collision, true if there is a collision, false if not. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_ga22e049c193218c9d877dd91006e5205a}{snake\+\_\+snake\+\_\+collision} ()
+\begin{DoxyCompactList}\small\item\em Detects snake/snake collisions ~\newline
+ Returns true if there is a collision and false if not. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df}{move\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Move snake, true if snake can move, false if not (when snake collides with itself) ~\newline
+ If snake collides with apple creates a new head for the snake and returns true ~\newline
+ If snake collides with itself returns false ~\newline
+ If there are no collisions creates a new head for the snake and deletes the last node. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_ga2d7305ea484489bb0edc9d48eb78c584}{change\+\_\+snake\+\_\+direction} (uint8\+\_\+t \hyperlink{proj_8c_a96f44d20f1dbf1c8785a7bc99a46164c}{byte})
+\begin{DoxyCompactList}\small\item\em Change snake direction, using keyboard arrows ~\newline
+ Returns true if it can change direction, false otherwise (if new direction is the opposite of the current one) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__snake_gaff1029a518bdc2651007b8856f958364}{Node\+::x}
+\item 
+int \hyperlink{group__snake_gaa3e5b5240023b4528ae85057b3324202}{Node\+::y}
+\item 
+struct \hyperlink{structNode}{Node} $\ast$ \hyperlink{group__snake_gaf67b110ca1a258b793bf69d306929b22}{Node\+::next}
+\item 
+struct \hyperlink{structNode}{Node} $\ast$ \hyperlink{group__snake_ga109053b41cd5f989eac4742f0b139564}{Snake\+::head}
+\item 
+uint16\+\_\+t \hyperlink{group__snake_gac5974bcc8ad17bcbcc596efee11ac663}{Snake\+::score}
+\item 
+uint16\+\_\+t \hyperlink{group__snake_gadc40d93d974c78cf3011671c4d290d87}{Snake\+::direction}
+\item 
+int \hyperlink{group__snake_gaedf8e7ca13c3d949b838b213972a750b}{Apple\+::x}
+\item 
+int \hyperlink{group__snake_ga4f79ed7ae0b68f49053147b3d8bad28c}{Apple\+::y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structSnake}{Snake} functions and structs used.
+
+\begin{DoxyAuthor}{Author}
+João Carlos Carreira Martins 
+
+João Francisco de Pinho Brandão 
+\end{DoxyAuthor}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__snake_ga4193cd1c8c2e6ebd0e056fa2364a663f}\label{group__snake_ga4193cd1c8c2e6ebd0e056fa2364a663f}} 
+\index{snake@{snake}!D\+O\+WN@{D\+O\+WN}}
+\index{D\+O\+WN@{D\+O\+WN}!snake@{snake}}
+\subsubsection{\texorpdfstring{D\+O\+WN}{DOWN}}
+{\footnotesize\ttfamily \#define D\+O\+WN~3}
+
+\mbox{\Hypertarget{group__snake_ga437ef08681e7210d6678427030446a54}\label{group__snake_ga437ef08681e7210d6678427030446a54}} 
+\index{snake@{snake}!L\+E\+FT@{L\+E\+FT}}
+\index{L\+E\+FT@{L\+E\+FT}!snake@{snake}}
+\subsubsection{\texorpdfstring{L\+E\+FT}{LEFT}}
+{\footnotesize\ttfamily \#define L\+E\+FT~0}
+
+\mbox{\Hypertarget{group__snake_ga80fb826a684cf3f0d306b22aa100ddac}\label{group__snake_ga80fb826a684cf3f0d306b22aa100ddac}} 
+\index{snake@{snake}!R\+I\+G\+HT@{R\+I\+G\+HT}}
+\index{R\+I\+G\+HT@{R\+I\+G\+HT}!snake@{snake}}
+\subsubsection{\texorpdfstring{R\+I\+G\+HT}{RIGHT}}
+{\footnotesize\ttfamily \#define R\+I\+G\+HT~2}
+
+\mbox{\Hypertarget{group__snake_ga1965eaca47dbf3f87acdafc2208f04eb}\label{group__snake_ga1965eaca47dbf3f87acdafc2208f04eb}} 
+\index{snake@{snake}!UP@{UP}}
+\index{UP@{UP}!snake@{snake}}
+\subsubsection{\texorpdfstring{UP}{UP}}
+{\footnotesize\ttfamily \#define UP~1}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__snake_ga2d7305ea484489bb0edc9d48eb78c584}\label{group__snake_ga2d7305ea484489bb0edc9d48eb78c584}} 
+\index{snake@{snake}!change\+\_\+snake\+\_\+direction@{change\+\_\+snake\+\_\+direction}}
+\index{change\+\_\+snake\+\_\+direction@{change\+\_\+snake\+\_\+direction}!snake@{snake}}
+\subsubsection{\texorpdfstring{change\+\_\+snake\+\_\+direction()}{change\_snake\_direction()}}
+{\footnotesize\ttfamily bool() change\+\_\+snake\+\_\+direction (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+
+
+Change snake direction, using keyboard arrows ~\newline
+ Returns true if it can change direction, false otherwise (if new direction is the opposite of the current one) 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__snake_ga2d7305ea484489bb0edc9d48eb78c584_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__snake_ga1ae3641fd30af1df1253e07890eb5fd3}\label{group__snake_ga1ae3641fd30af1df1253e07890eb5fd3}} 
+\index{snake@{snake}!create\+\_\+snake@{create\+\_\+snake}}
+\index{create\+\_\+snake@{create\+\_\+snake}!snake@{snake}}
+\subsubsection{\texorpdfstring{create\+\_\+snake()}{create\_snake()}}
+{\footnotesize\ttfamily void() create\+\_\+snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create snake struct with size 4, score 0 and direction R\+I\+G\+HT. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{group__snake_ga1ae3641fd30af1df1253e07890eb5fd3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__snake_gaeb429d76c826d2c0620425031a995528}\label{group__snake_gaeb429d76c826d2c0620425031a995528}} 
+\index{snake@{snake}!is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map@{is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map}}
+\index{is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map@{is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map}!snake@{snake}}
+\subsubsection{\texorpdfstring{is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map()}{is\_snake\_at\_end\_of\_map()}}
+{\footnotesize\ttfamily bool() is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if snake is at the end of the map. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{group__snake_gaeb429d76c826d2c0620425031a995528_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__snake_gaeb429d76c826d2c0620425031a995528_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df}\label{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df}} 
+\index{snake@{snake}!move\+\_\+snake@{move\+\_\+snake}}
+\index{move\+\_\+snake@{move\+\_\+snake}!snake@{snake}}
+\subsubsection{\texorpdfstring{move\+\_\+snake()}{move\_snake()}}
+{\footnotesize\ttfamily bool() move\+\_\+snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Move snake, true if snake can move, false if not (when snake collides with itself) ~\newline
+ If snake collides with apple creates a new head for the snake and returns true ~\newline
+ If snake collides with itself returns false ~\newline
+ If there are no collisions creates a new head for the snake and deletes the last node. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__snake_ga019c20c4c67169ac20f2959a0697e89e}\label{group__snake_ga019c20c4c67169ac20f2959a0697e89e}} 
+\index{snake@{snake}!snake\+\_\+apple\+\_\+collision@{snake\+\_\+apple\+\_\+collision}}
+\index{snake\+\_\+apple\+\_\+collision@{snake\+\_\+apple\+\_\+collision}!snake@{snake}}
+\subsubsection{\texorpdfstring{snake\+\_\+apple\+\_\+collision()}{snake\_apple\_collision()}}
+{\footnotesize\ttfamily bool() snake\+\_\+apple\+\_\+collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Detects snake/apple collision, true if there is a collision, false if not. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__snake_ga019c20c4c67169ac20f2959a0697e89e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__snake_ga22e049c193218c9d877dd91006e5205a}\label{group__snake_ga22e049c193218c9d877dd91006e5205a}} 
+\index{snake@{snake}!snake\+\_\+snake\+\_\+collision@{snake\+\_\+snake\+\_\+collision}}
+\index{snake\+\_\+snake\+\_\+collision@{snake\+\_\+snake\+\_\+collision}!snake@{snake}}
+\subsubsection{\texorpdfstring{snake\+\_\+snake\+\_\+collision()}{snake\_snake\_collision()}}
+{\footnotesize\ttfamily bool() snake\+\_\+snake\+\_\+collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Detects snake/snake collisions ~\newline
+ Returns true if there is a collision and false if not. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__snake_ga22e049c193218c9d877dd91006e5205a_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group__snake_gadc40d93d974c78cf3011671c4d290d87}\label{group__snake_gadc40d93d974c78cf3011671c4d290d87}} 
+\index{snake@{snake}!direction@{direction}}
+\index{direction@{direction}!snake@{snake}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily uint16\+\_\+t Snake\+::direction}
+
+\mbox{\Hypertarget{group__snake_ga109053b41cd5f989eac4742f0b139564}\label{group__snake_ga109053b41cd5f989eac4742f0b139564}} 
+\index{snake@{snake}!head@{head}}
+\index{head@{head}!snake@{snake}}
+\subsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily struct \hyperlink{structNode}{Node}$\ast$ Snake\+::head}
+
+\mbox{\Hypertarget{group__snake_gaf67b110ca1a258b793bf69d306929b22}\label{group__snake_gaf67b110ca1a258b793bf69d306929b22}} 
+\index{snake@{snake}!next@{next}}
+\index{next@{next}!snake@{snake}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \hyperlink{structNode}{Node}$\ast$ Node\+::next}
+
+\mbox{\Hypertarget{group__snake_gac5974bcc8ad17bcbcc596efee11ac663}\label{group__snake_gac5974bcc8ad17bcbcc596efee11ac663}} 
+\index{snake@{snake}!score@{score}}
+\index{score@{score}!snake@{snake}}
+\subsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily uint16\+\_\+t Snake\+::score}
+
+\mbox{\Hypertarget{group__snake_gaff1029a518bdc2651007b8856f958364}\label{group__snake_gaff1029a518bdc2651007b8856f958364}} 
+\index{snake@{snake}!x@{x}}
+\index{x@{x}!snake@{snake}}
+\subsubsection{\texorpdfstring{x}{x}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Node\+::x}
+
+\mbox{\Hypertarget{group__snake_gaedf8e7ca13c3d949b838b213972a750b}\label{group__snake_gaedf8e7ca13c3d949b838b213972a750b}} 
+\index{snake@{snake}!x@{x}}
+\index{x@{x}!snake@{snake}}
+\subsubsection{\texorpdfstring{x}{x}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Apple\+::x}
+
+\mbox{\Hypertarget{group__snake_gaa3e5b5240023b4528ae85057b3324202}\label{group__snake_gaa3e5b5240023b4528ae85057b3324202}} 
+\index{snake@{snake}!y@{y}}
+\index{y@{y}!snake@{snake}}
+\subsubsection{\texorpdfstring{y}{y}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Node\+::y}
+
+\mbox{\Hypertarget{group__snake_ga4f79ed7ae0b68f49053147b3d8bad28c}\label{group__snake_ga4f79ed7ae0b68f49053147b3d8bad28c}} 
+\index{snake@{snake}!y@{y}}
+\index{y@{y}!snake@{snake}}
+\subsubsection{\texorpdfstring{y}{y}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Apple\+::y}
+

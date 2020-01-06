@@ -1,0 +1,62 @@
+\hypertarget{snake_8c}{}\section{snake.\+c File Reference}
+\label{snake_8c}\index{snake.\+c@{snake.\+c}}
+{\ttfamily \#include \char`\"{}snake.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\newline
+Include dependency graph for snake.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{snake_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \hyperlink{group__snake_ga1ae3641fd30af1df1253e07890eb5fd3}{create\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Create snake struct with size 4, score 0 and direction R\+I\+G\+HT. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_gaeb429d76c826d2c0620425031a995528}{is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Checks if snake is at the end of the map. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_ga019c20c4c67169ac20f2959a0697e89e}{snake\+\_\+apple\+\_\+collision} ()
+\begin{DoxyCompactList}\small\item\em Detects snake/apple collision, true if there is a collision, false if not. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_ga22e049c193218c9d877dd91006e5205a}{snake\+\_\+snake\+\_\+collision} ()
+\begin{DoxyCompactList}\small\item\em Detects snake/snake collisions ~\newline
+ Returns true if there is a collision and false if not. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df}{move\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Move snake, true if snake can move, false if not (when snake collides with itself) ~\newline
+ If snake collides with apple creates a new head for the snake and returns true ~\newline
+ If snake collides with itself returns false ~\newline
+ If there are no collisions creates a new head for the snake and deletes the last node. \end{DoxyCompactList}\item 
+bool() \hyperlink{group__snake_ga2d7305ea484489bb0edc9d48eb78c584}{change\+\_\+snake\+\_\+direction} (uint8\+\_\+t \hyperlink{proj_8c_a96f44d20f1dbf1c8785a7bc99a46164c}{byte})
+\begin{DoxyCompactList}\small\item\em Change snake direction, using keyboard arrows ~\newline
+ Returns true if it can change direction, false otherwise (if new direction is the opposite of the current one) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structSnake}{Snake} $\ast$ \hyperlink{snake_8c_a1ba5c80cb370285c30043c5a2dc77fc9}{snake}
+\item 
+uint16\+\_\+t \hyperlink{snake_8c_a32a3c1a996e95742fb59745996e0b197}{pixels\+\_\+per\+\_\+unit} = 25
+\item 
+struct \hyperlink{structApple}{Apple} $\ast$ \hyperlink{snake_8c_a81cf9cc1a8086a17d8efb8b983492478}{apple} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{snake_8c_a81cf9cc1a8086a17d8efb8b983492478}\label{snake_8c_a81cf9cc1a8086a17d8efb8b983492478}} 
+\index{snake.\+c@{snake.\+c}!apple@{apple}}
+\index{apple@{apple}!snake.\+c@{snake.\+c}}
+\subsubsection{\texorpdfstring{apple}{apple}}
+{\footnotesize\ttfamily struct \hyperlink{structApple}{Apple}$\ast$ apple = N\+U\+LL}
+
+\mbox{\Hypertarget{snake_8c_a32a3c1a996e95742fb59745996e0b197}\label{snake_8c_a32a3c1a996e95742fb59745996e0b197}} 
+\index{snake.\+c@{snake.\+c}!pixels\+\_\+per\+\_\+unit@{pixels\+\_\+per\+\_\+unit}}
+\index{pixels\+\_\+per\+\_\+unit@{pixels\+\_\+per\+\_\+unit}!snake.\+c@{snake.\+c}}
+\subsubsection{\texorpdfstring{pixels\+\_\+per\+\_\+unit}{pixels\_per\_unit}}
+{\footnotesize\ttfamily uint16\+\_\+t pixels\+\_\+per\+\_\+unit = 25}
+
+\mbox{\Hypertarget{snake_8c_a1ba5c80cb370285c30043c5a2dc77fc9}\label{snake_8c_a1ba5c80cb370285c30043c5a2dc77fc9}} 
+\index{snake.\+c@{snake.\+c}!snake@{snake}}
+\index{snake@{snake}!snake.\+c@{snake.\+c}}
+\subsubsection{\texorpdfstring{snake}{snake}}
+{\footnotesize\ttfamily struct \hyperlink{structSnake}{Snake}$\ast$ snake}
+

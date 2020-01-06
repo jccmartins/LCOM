@@ -1,0 +1,57 @@
+#ifndef SNAKE_H
+#define SNAKE_H
+
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdint.h>
+
+/**
+ * FUNCTIONS
+ */
+void(create_snake)();
+bool(is_snake_at_end_of_map)();
+bool(snake_apple_collision)();
+// void(process_collisions)();
+bool(snake_snake_collision)();
+bool(move_snake)();
+bool(change_snake_direction)(uint8_t byte);
+
+
+
+/**
+ * Struct Node, used to store snake positions
+ */
+struct Node {
+  int x;
+  int y;
+  struct Node *next;
+};
+
+/**
+ * Struct Snake
+ * head is the struct with the head of the snake positions
+ */
+struct Snake {
+  struct Node *head;
+  struct Node *last;
+  uint16_t score;
+  uint16_t direction;
+};
+
+/**
+ * Struct Apple, with the apple positions
+ */
+struct Apple {
+  int x;
+  int y;
+};
+
+//defines for snake directions
+#define LEFT 0
+#define UP 1
+#define RIGHT 2
+#define DOWN 3
+
+#endif

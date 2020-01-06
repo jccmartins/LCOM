@@ -1,0 +1,28 @@
+#ifndef MOUSE_H
+#define MOUSE_H
+
+#include "i8042.h"
+#include <lcom/lcf.h>
+#include <stdint.h>
+
+
+/**
+ * Struct Mouse, stores mouse x and y position
+ */
+struct Mouse{
+  int x, y;
+};
+
+void(create_mouse)();
+void(mouse_process_event)(struct mouse_ev *mouse_event);
+int(mouse_subscribe_int)(uint8_t *bit_no);
+int(mouse_disable_irq)();
+int(mouse_enable_irq)();
+int(mouse_unsubscribe_int)();
+void(mouse_ih)();
+void(packet_parser)(struct packet *pp);
+int(is_IBF_set)();
+int(is_OBF_set)();
+uint8_t(mouse_command)(uint8_t value);
+
+#endif

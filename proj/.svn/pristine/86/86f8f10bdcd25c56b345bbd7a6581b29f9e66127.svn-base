@@ -1,0 +1,53 @@
+\hypertarget{mouse_8h}{}\section{mouse.\+h File Reference}
+\label{mouse_8h}\index{mouse.\+h@{mouse.\+h}}
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for mouse.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{mouse_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{mouse_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structMouse}{Mouse}
+\begin{DoxyCompactList}\small\item\em Stores mouse x and y position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \hyperlink{group__mouse_gad2dbdfeaa921e9d7a2796bfe003670a7}{create\+\_\+mouse} ()
+\begin{DoxyCompactList}\small\item\em Create mouse struct with x and y position in the middle of the screen. \end{DoxyCompactList}\item 
+void() \hyperlink{group__mouse_gadd8392c6469ceff59d345a3a7ff1027a}{mouse\+\_\+process\+\_\+event} (struct mouse\+\_\+ev $\ast$mouse\+\_\+event)
+\begin{DoxyCompactList}\small\item\em Processes event from mouse. \end{DoxyCompactList}\item 
+int() \hyperlink{group__mouse_ga20285aed4b3ef45812cd967532dd09db}{mouse\+\_\+subscribe\+\_\+int} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribes mouse interrupts. \end{DoxyCompactList}\item 
+int() \hyperlink{group__mouse_gaab2e4485c75ef16ea9fbd7662bf12e23}{mouse\+\_\+disable\+\_\+irq} ()
+\begin{DoxyCompactList}\small\item\em Disable mouse I\+RQ line. \end{DoxyCompactList}\item 
+int() \hyperlink{group__mouse_gab07d3648ab5a4565e55fbf0fa0904bd6}{mouse\+\_\+enable\+\_\+irq} ()
+\begin{DoxyCompactList}\small\item\em Enables mouse I\+RQ line. \end{DoxyCompactList}\item 
+int() \hyperlink{group__mouse_ga3ecf823d80520009ae5e0d76ae40a3c3}{mouse\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes mouse interrupts. \end{DoxyCompactList}\item 
+void() \hyperlink{group__mouse_ga210374b50462acdedab00df64d5cea3c}{mouse\+\_\+ih} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{structMouse}{Mouse} interrupts handler. \end{DoxyCompactList}\item 
+void() \hyperlink{group__mouse_ga7a4689a8f91c2155ea5a1117721b86b9}{packet\+\_\+parser} (struct packet $\ast$\hyperlink{proj_8c_a26e83eca70c2b9169fbbb0eac7e32e32}{pp})
+\begin{DoxyCompactList}\small\item\em Parses mouse packets. \end{DoxyCompactList}\item 
+int() \hyperlink{group__mouse_gae5173853c368d50dd463f5c72a63ded9}{is\+\_\+\+I\+B\+F\+\_\+set} ()
+\begin{DoxyCompactList}\small\item\em Checks if I\+BF is set ~\newline
+ Checks a maximum of 5 times and returns 0 if I\+BF is not set, otherwise returns 1 if after 5 tries I\+BF is always set. \end{DoxyCompactList}\item 
+int() \hyperlink{group__mouse_ga3a67eb6eb302f8140a3a6d16d40c86af}{is\+\_\+\+O\+B\+F\+\_\+set} ()
+\begin{DoxyCompactList}\small\item\em Checks if O\+BF is set ~\newline
+ Checks a maximum of 5 times and returns 0 if O\+BF is set, otherwise returns 1 if after 5 tries O\+BF is never set. \end{DoxyCompactList}\item 
+uint8\+\_\+t() \hyperlink{group__mouse_gacbf0aed06c0dbd0869075d318adf3147}{mouse\+\_\+command} (uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Writes a mouse command to the mouse. \end{DoxyCompactList}\end{DoxyCompactItemize}

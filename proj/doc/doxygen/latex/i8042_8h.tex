@@ -1,0 +1,65 @@
+\hypertarget{i8042_8h}{}\section{i8042.\+h File Reference}
+\label{i8042_8h}\index{i8042.\+h@{i8042.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{i8042_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__i8042_ga5c1072213ce8d8cd43628c4319ae0391}{K\+B\+D\+\_\+\+I\+RQ}~1
+\begin{DoxyCompactList}\small\item\em Keyboard I\+RQ line. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga85964cb90343bb1a029b1d1b4229f910}{M\+O\+U\+S\+E\+\_\+\+I\+RQ}~12
+\begin{DoxyCompactList}\small\item\em mouse I\+RQ line \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga89c4d098b53809674457b1660b1af780}{S\+T\+A\+T\+\_\+\+R\+EG}~0x64
+\begin{DoxyCompactList}\small\item\em Status Register Address. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_gacfb42dde389e8ca36ab267002fbf5c6a}{O\+U\+T\+\_\+\+B\+UF}~0x60
+\begin{DoxyCompactList}\small\item\em Output Buffer Address. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga249ebdd75e023b1e9e20080ef554960e}{I\+N\+\_\+\+B\+U\+F\+\_\+\+K\+B\+C\+\_\+\+C\+MD}~0x64
+\begin{DoxyCompactList}\small\item\em Input Buffer Address to write commands to the K\+BC. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga3bbd6cf6e51fa9731aaad8361cc83b5a}{I\+N\+\_\+\+B\+U\+F\+\_\+\+C\+M\+D\+\_\+\+B\+Y\+TE}~0x60
+\begin{DoxyCompactList}\small\item\em Input Buffer Address to write arguments of K\+BC commands. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga343f44cb034d2d2ff3438b3d45dcde1f}{E\+S\+C\+\_\+\+B\+R\+E\+AK}~0x81
+\begin{DoxyCompactList}\small\item\em E\+SC makecode. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga1a522aa19bcb695a9df30032a893bee3}{D\+E\+L\+A\+Y\+\_\+\+US}~20000
+\begin{DoxyCompactList}\small\item\em Keyboard maximum delay to respond to a command. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga81d2ca6759f3f3bf04556b7558aea6bc}{P\+A\+R\+I\+T\+Y\+\_\+\+E\+R\+R\+OR}~B\+IT(7)
+\begin{DoxyCompactList}\small\item\em Parity Error -\/ Invalid Data. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_gaefc48d416c882f06edaf6d01779d4d74}{T\+I\+M\+E\+O\+U\+T\+\_\+\+E\+R\+R\+OR}~B\+IT(6)
+\begin{DoxyCompactList}\small\item\em Timeout Error -\/ Invalid Data. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga45967c9e25447ba853cf6fb4ac545fe6}{O\+BF}~B\+IT(0)
+\begin{DoxyCompactList}\small\item\em Output Buffer full -\/ data available for reading. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga3c48b10907056351582baf9f6478598e}{I\+BF}~B\+IT(1)
+\begin{DoxyCompactList}\small\item\em Input Buffer full -\/ don\textquotesingle{}t write commands or arguments. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga1b41fd2be63532d4ab910f8b256c3811}{A\+UX}~B\+IT(5)
+\begin{DoxyCompactList}\small\item\em \hyperlink{structMouse}{Mouse} Data. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga92e32a12d07e5e7237c9993bb1c66728}{W\+R\+I\+T\+E\+\_\+\+M\+O\+U\+S\+E\+\_\+\+C\+MD}~0x\+D4
+\begin{DoxyCompactList}\small\item\em Write byte to mouse. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga79d89ac0be30f2b28b0d943dfe2d5163}{E\+N\+A\+B\+L\+E\+\_\+\+D\+A\+T\+A\+\_\+\+R\+PT}~0x\+F4
+\begin{DoxyCompactList}\small\item\em Enable Data Reporting -\/ In stream mode only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_gac9a22764b0458496adea82584e5ab22a}{D\+I\+S\+A\+B\+L\+E\+\_\+\+D\+A\+T\+A\+\_\+\+R\+PT}~0x\+F5
+\begin{DoxyCompactList}\small\item\em Disable Data Reporting -\/ In stream mode, should be sent before any other command. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_gaabf49b4a4d8ad72d202c8a7197058e35}{S\+E\+T\+\_\+\+S\+T\+R\+E\+A\+M\+\_\+\+M\+O\+DE}~0x\+EA
+\begin{DoxyCompactList}\small\item\em Set Stream Mode -\/ send data on events. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga19a57d9d2eafd32ee130c0f526906719}{S\+E\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+M\+O\+DE}~0x\+F0
+\begin{DoxyCompactList}\small\item\em Set Remote Mode -\/ send data on request only. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga8d406d5aff787991429e62cfd9bac721}{R\+E\+A\+D\+\_\+\+D\+A\+TA}~0x\+EB
+\begin{DoxyCompactList}\small\item\em Read Data -\/ send data packet request. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga6f6489887e08bff4887d0bc5dcf214d8}{A\+CK}~0x\+FA
+\begin{DoxyCompactList}\small\item\em Acknowledgment byte if everything OK. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga958518a45b12053ae33606ee7cb68a55}{N\+A\+CK}~0x\+FE
+\begin{DoxyCompactList}\small\item\em Acknowledgment byte if invalid byte. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga8fe83ac76edc595f6b98cd4a4127aed5}{E\+R\+R\+OR}~0x\+FC
+\begin{DoxyCompactList}\small\item\em Acknowledgment byte if second consecutive invalid byte. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga1ec26f7b582f7c28df4ba3aec6c57f07}{U\+P\+\_\+\+A\+R\+R\+O\+W\+\_\+\+M\+A\+KE}~0x48
+\begin{DoxyCompactList}\small\item\em Up Arrow makecode. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga8206e6a537a9bb6827f621317741beaf}{D\+O\+W\+N\+\_\+\+A\+R\+R\+O\+W\+\_\+\+M\+A\+KE}~0x50
+\begin{DoxyCompactList}\small\item\em Down Arrow makecode. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_gae3dc1edafe2b82c91cdec253668a29fd}{L\+E\+F\+T\+\_\+\+A\+R\+R\+O\+W\+\_\+\+M\+A\+KE}~0x4b
+\begin{DoxyCompactList}\small\item\em Left Arrow makecode. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__i8042_ga2536fefd72e6fdc8a94b67e75f1a40d1}{R\+I\+G\+H\+T\+\_\+\+A\+R\+R\+O\+W\+\_\+\+M\+A\+KE}~0x4d
+\begin{DoxyCompactList}\small\item\em Right Arrow makecode. \end{DoxyCompactList}\end{DoxyCompactItemize}

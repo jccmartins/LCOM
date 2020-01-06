@@ -1,0 +1,10 @@
+\section{Modules}
+Here is a list of all modules\+:\begin{DoxyCompactList}
+\item \contentsline{section}{graphics}{\pageref{group__graphics}}{}
+\item \contentsline{section}{i8042}{\pageref{group__i8042}}{}
+\item \contentsline{section}{i8254}{\pageref{group__i8254}}{}
+\item \contentsline{section}{keyboard}{\pageref{group__keyboard}}{}
+\item \contentsline{section}{mouse}{\pageref{group__mouse}}{}
+\item \contentsline{section}{rtc}{\pageref{group__rtc}}{}
+\item \contentsline{section}{snake}{\pageref{group__snake}}{}
+\end{DoxyCompactList}

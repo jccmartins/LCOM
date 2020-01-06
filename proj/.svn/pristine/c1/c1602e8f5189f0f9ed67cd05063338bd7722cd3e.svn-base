@@ -1,0 +1,5 @@
+<map id="draw_map" name="draw_map">
+<area shape="rect" id="node2" href="$group__graphics.html#ga99d2da2559e11200c6b40c469e9977ec" title="Draw rectangle to buffer. " alt="" coords="136,5,267,32"/>
+<area shape="rect" id="node3" href="$group__graphics.html#ga5e5b25bd525250f61f40b9e9f212d5e6" title="Draw line to buffer. " alt="" coords="315,5,420,32"/>
+<area shape="rect" id="node4" href="$group__graphics.html#ga65f94690b45d2d89490a476bc0876ac4" title="Draw pixel to buffer. " alt="" coords="468,5,573,32"/>
+</map>

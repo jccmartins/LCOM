@@ -1,0 +1,100 @@
+\hypertarget{rtc_8c}{}\section{rtc.\+c File Reference}
+\label{rtc_8c}\index{rtc.\+c@{rtc.\+c}}
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\newline
+Include dependency graph for rtc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{rtc_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int() \hyperlink{group__rtc_ga6bbe679f115cec90d36d50eb2aac1b89}{rtc\+\_\+subscribe\+\_\+int} (uint8\+\_\+t $\ast$bit\+\_\+no)
+\begin{DoxyCompactList}\small\item\em Subscribe R\+TC interrupts. \end{DoxyCompactList}\item 
+int() \hyperlink{group__rtc_ga9d4850bb2a488644672d43287f160622}{rtc\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribe R\+TC interrupts. \end{DoxyCompactList}\item 
+void() \hyperlink{group__rtc_ga298c9a14801d124c4b3a61a7dd0dc5f6}{set\+\_\+rtc\+\_\+interrupts} ()
+\begin{DoxyCompactList}\small\item\em Set Alarm and Update Interrupts of the R\+TC. \end{DoxyCompactList}\item 
+void() \hyperlink{group__rtc_ga48e4065b3387c3e8c78a1e114c73554e}{set\+\_\+alarm\+\_\+seconds\+\_\+after} (uint32\+\_\+t hours, uint32\+\_\+t minutes, uint32\+\_\+t seconds, uint32\+\_\+t seconds\+\_\+after)
+\begin{DoxyCompactList}\small\item\em Set time of the alarm seconds after time specified in hours, minutes and seconds. \end{DoxyCompactList}\item 
+uint32\+\_\+t() \hyperlink{group__rtc_ga11fd18e1bdb318485926015c12a8ef15}{bcd\+\_\+to\+\_\+decimal} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Returns a decimal number converted from binary-\/coded decimal. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{group__rtc_ga2e0029ef8fd7e11a5189b0bc4634a2c7}{decimal\+\_\+to\+\_\+bcd} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Returns a binary-\/coded number converted from decimal. \end{DoxyCompactList}\item 
+int() \hyperlink{group__rtc_ga51db428cbafeba59111359b236ed248a}{get\+Hours} ()
+\begin{DoxyCompactList}\small\item\em Returns hours from the R\+TC. \end{DoxyCompactList}\item 
+int() \hyperlink{group__rtc_gad64e3c6015d2b7c99c50817798309d52}{get\+Minutes} ()
+\begin{DoxyCompactList}\small\item\em Returns minutes from the R\+TC. \end{DoxyCompactList}\item 
+int() \hyperlink{group__rtc_ga03144495c6cd7841203162b527998b53}{get\+Seconds} ()
+\begin{DoxyCompactList}\small\item\em Returns seconds from the R\+TC. \end{DoxyCompactList}\item 
+void() \hyperlink{rtc_8c_aa92511e4508179a73fd0a074fa007c78}{rtc\+\_\+ih} (bool $\ast$alarm\+\_\+interrupt)
+\item 
+void() \hyperlink{group__rtc_ga9f92f313c3714cb364715862d8737cd4}{handle\+\_\+update\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Handles update interrupts. \end{DoxyCompactList}\item 
+void() \hyperlink{rtc_8c_a6b74d47f0201dd34f53fab4db065af00}{handle\+\_\+alarm\+\_\+int} (bool $\ast$alarm\+\_\+interrupt)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}{rtc\+\_\+hook\+\_\+id} = 3
+\item 
+struct \hyperlink{structTime}{Time} $\ast$ \hyperlink{rtc_8c_aeff6413b7331c7e06f7cf170d8462575}{rtc\+\_\+time} = N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{rtc_8c_a6b74d47f0201dd34f53fab4db065af00}\label{rtc_8c_a6b74d47f0201dd34f53fab4db065af00}} 
+\index{rtc.\+c@{rtc.\+c}!handle\+\_\+alarm\+\_\+int@{handle\+\_\+alarm\+\_\+int}}
+\index{handle\+\_\+alarm\+\_\+int@{handle\+\_\+alarm\+\_\+int}!rtc.\+c@{rtc.\+c}}
+\subsubsection{\texorpdfstring{handle\+\_\+alarm\+\_\+int()}{handle\_alarm\_int()}}
+{\footnotesize\ttfamily void() handle\+\_\+alarm\+\_\+int (\begin{DoxyParamCaption}\item[{bool $\ast$}]{alarm\+\_\+interrupt }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_a6b74d47f0201dd34f53fab4db065af00_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{rtc_8c_aa92511e4508179a73fd0a074fa007c78}\label{rtc_8c_aa92511e4508179a73fd0a074fa007c78}} 
+\index{rtc.\+c@{rtc.\+c}!rtc\+\_\+ih@{rtc\+\_\+ih}}
+\index{rtc\+\_\+ih@{rtc\+\_\+ih}!rtc.\+c@{rtc.\+c}}
+\subsubsection{\texorpdfstring{rtc\+\_\+ih()}{rtc\_ih()}}
+{\footnotesize\ttfamily void() rtc\+\_\+ih (\begin{DoxyParamCaption}\item[{bool $\ast$}]{alarm\+\_\+interrupt }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{rtc_8c_aa92511e4508179a73fd0a074fa007c78_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{rtc_8c_aa92511e4508179a73fd0a074fa007c78_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}\label{rtc_8c_a6c52a1d32571a429369253ce7c3a3d7a}} 
+\index{rtc.\+c@{rtc.\+c}!rtc\+\_\+hook\+\_\+id@{rtc\+\_\+hook\+\_\+id}}
+\index{rtc\+\_\+hook\+\_\+id@{rtc\+\_\+hook\+\_\+id}!rtc.\+c@{rtc.\+c}}
+\subsubsection{\texorpdfstring{rtc\+\_\+hook\+\_\+id}{rtc\_hook\_id}}
+{\footnotesize\ttfamily int rtc\+\_\+hook\+\_\+id = 3\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{rtc_8c_aeff6413b7331c7e06f7cf170d8462575}\label{rtc_8c_aeff6413b7331c7e06f7cf170d8462575}} 
+\index{rtc.\+c@{rtc.\+c}!rtc\+\_\+time@{rtc\+\_\+time}}
+\index{rtc\+\_\+time@{rtc\+\_\+time}!rtc.\+c@{rtc.\+c}}
+\subsubsection{\texorpdfstring{rtc\+\_\+time}{rtc\_time}}
+{\footnotesize\ttfamily struct \hyperlink{structTime}{Time}$\ast$ rtc\+\_\+time = N\+U\+LL}
+

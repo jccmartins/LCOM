@@ -1,0 +1,43 @@
+\hypertarget{structSnake}{}\section{Snake Struct Reference}
+\label{structSnake}\index{Snake@{Snake}}
+
+
+Stores snake information.  
+
+
+
+
+{\ttfamily \#include $<$snake.\+h$>$}
+
+
+
+Collaboration diagram for Snake\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structNode}{Node} $\ast$ {\bfseries head}
+\item 
+uint16\+\_\+t {\bfseries score}
+\item 
+uint16\+\_\+t {\bfseries direction}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores snake information. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & -\/ Stores position of the head of the snake and a struct node pointer to the next piece \\
+\hline
+{\em score} & -\/ Score of the snake, equals to the number of apples eaten \\
+\hline
+{\em direction} & -\/ \hyperlink{structSnake}{Snake} current direction (Left, Up, Right or Bottom) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+snake.\+h\end{DoxyCompactItemize}

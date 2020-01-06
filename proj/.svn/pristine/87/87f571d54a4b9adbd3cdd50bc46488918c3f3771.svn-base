@@ -1,0 +1,14 @@
+<map id="draw_scene" name="draw_scene">
+<area shape="rect" id="node2" href="$group__graphics.html#ga3b11d835d79f07bc68a7411380ab079f" title="Draws map of the game. " alt="" coords="150,5,233,32"/>
+<area shape="rect" id="node6" href="$group__graphics.html#ga2a792507ffcbc0b1674663fdd2912146" title="Draws snake in the map. " alt="" coords="145,56,237,83"/>
+<area shape="rect" id="node7" href="$group__graphics.html#gab7db602b92bb5aac8acef76d0f054841" title="Draws apple on the screen if it exists. " alt="" coords="321,56,409,83"/>
+<area shape="rect" id="node9" href="$group__graphics.html#ga80af57db2938c468835bd5530bee459b" title="Draws score on the board. " alt="" coords="147,157,236,184"/>
+<area shape="rect" id="node11" href="$group__graphics.html#ga776a8744adec930fe3a33571a5181b82" title="Draws the time on the screen. " alt="" coords="150,208,233,235"/>
+<area shape="rect" id="node13" href="$group__graphics.html#ga7312ae0798b69b9b882f214132f3125c" title="Draws mouse pointer. " alt="" coords="317,309,413,336"/>
+<area shape="rect" id="node3" href="$group__graphics.html#ga99d2da2559e11200c6b40c469e9977ec" title="Draw rectangle to buffer. " alt="" coords="299,5,430,32"/>
+<area shape="rect" id="node4" href="$group__graphics.html#ga5e5b25bd525250f61f40b9e9f212d5e6" title="Draw line to buffer. " alt="" coords="492,56,597,83"/>
+<area shape="rect" id="node5" href="$group__graphics.html#ga65f94690b45d2d89490a476bc0876ac4" title="Draw pixel to buffer. " alt="" coords="645,132,751,159"/>
+<area shape="rect" id="node8" href="$group__graphics.html#ga916bc37e49907c4ab956faed54cca26c" title="Draw xpm to buffer. " alt="" coords="497,157,592,184"/>
+<area shape="rect" id="node10" href="$group__graphics.html#gace1c78dff1f4213a58831af87a14553f" title="Get X resolution of current VBE mode. " alt="" coords="325,157,404,184"/>
+<area shape="rect" id="node12" href="$group__graphics.html#gad39625cb1ee413bfc209a634f522bf25" title="Draws a number with two digits (if less than 10 draws a 0 first) on the screen. " alt="" coords="285,259,444,285"/>
+</map>

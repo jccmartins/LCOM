@@ -1,0 +1,28 @@
+\hypertarget{structTime}{}\section{Time Struct Reference}
+\label{structTime}\index{Time@{Time}}
+
+
+Stores hours, minutes and seconds of the R\+TC.  
+
+
+
+
+{\ttfamily \#include $<$rtc.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries hours}
+\item 
+int {\bfseries minutes}
+\item 
+int {\bfseries seconds}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores hours, minutes and seconds of the R\+TC. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+rtc.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="is_snake_at_end_of_map" name="is_snake_at_end_of_map">
+<area shape="rect" id="node2" href="$group__snake.html#ga9af510c579ee289c7d6cc5a8d65cc3df" title="Move snake, true if snake can move, false if not (when snake collides with itself) &#160;&#160;If snake collide..." alt="" coords="224,5,320,32"/>
+<area shape="rect" id="node3" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="368,5,453,32"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="501,5,611,32"/>
+</map>

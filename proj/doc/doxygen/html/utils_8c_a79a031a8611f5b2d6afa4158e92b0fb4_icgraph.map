@@ -1,0 +1,9 @@
+<map id="util_sys_inb" name="util_sys_inb">
+<area shape="rect" id="node2" href="$group__keyboard.html#gaea970a154161a35f6894898a092ed70a" title="Keyboard interrupts handler. " alt="" coords="315,5,375,32"/>
+<area shape="rect" id="node5" href="$group__mouse.html#ga210374b50462acdedab00df64d5cea3c" title="Mouse interrupts handler. " alt="" coords="306,56,385,83"/>
+<area shape="rect" id="node6" href="$group__mouse.html#gae5173853c368d50dd463f5c72a63ded9" title="Checks if IBF is set &#160;&#160;Checks a maximum of 5 times and returns 0 if IBF is not set, otherwise returns 1 if after 5 tries IBF is always set. " alt="" coords="147,107,232,133"/>
+<area shape="rect" id="node7" href="$group__mouse.html#gacbf0aed06c0dbd0869075d318adf3147" title="Writes a mouse command to the mouse. " alt="" coords="283,132,408,159"/>
+<area shape="rect" id="node8" href="$group__mouse.html#ga3a67eb6eb302f8140a3a6d16d40c86af" title="Checks if OBF is set &#160;&#160;Checks a maximum of 5 times and returns 0 if OBF is set, otherwise returns 1 i..." alt="" coords="144,208,235,235"/>
+<area shape="rect" id="node3" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="456,56,541,83"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="589,56,699,83"/>
+</map>

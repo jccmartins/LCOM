@@ -1,0 +1,4 @@
+<map id="is_snake_at_end_of_map" name="is_snake_at_end_of_map">
+<area shape="rect" id="node2" href="$group__graphics.html#gace1c78dff1f4213a58831af87a14553f" title="Get X resolution of current VBE mode. " alt="" coords="224,5,303,32"/>
+<area shape="rect" id="node3" href="$group__graphics.html#ga214f61afab0729e1cac38b3372d6c136" title="Get Y resolution of current VBE mode. " alt="" coords="224,56,303,83"/>
+</map>

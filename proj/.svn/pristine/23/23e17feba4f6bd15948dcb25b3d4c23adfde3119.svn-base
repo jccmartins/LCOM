@@ -1,0 +1,28 @@
+\hypertarget{structTime}{}\section{Time Struct Reference}
+\label{structTime}\index{Time@{Time}}
+
+
+Stores hours, minutes and seconds of the R\+TC.  
+
+
+
+
+{\ttfamily \#include $<$rtc.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__rtc_gaa207ff7d820b4c32f22e1474a931b195}{hours}
+\item 
+int \hyperlink{group__rtc_gacdca8b13b904057dfec90b68f3092bc4}{minutes}
+\item 
+int \hyperlink{group__rtc_ga4eda0725cd2272762ceae3336ca07db6}{seconds}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores hours, minutes and seconds of the R\+TC. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rtc_8h}{rtc.\+h}\end{DoxyCompactItemize}

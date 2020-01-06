@@ -1,0 +1,10 @@
+<map id="display_xpm" name="display_xpm">
+<area shape="rect" id="node2" href="$group__graphics.html#ga7312ae0798b69b9b882f214132f3125c" title="Draws mouse pointer. " alt="" coords="355,5,451,32"/>
+<area shape="rect" id="node6" href="$group__graphics.html#gab7db602b92bb5aac8acef76d0f054841" title="Draws apple on the screen if it exists. " alt="" coords="359,56,447,83"/>
+<area shape="rect" id="node7" href="$group__graphics.html#ga80af57db2938c468835bd5530bee459b" title="Draws score on the board. " alt="" coords="183,107,272,133"/>
+<area shape="rect" id="node8" href="$group__graphics.html#gad39625cb1ee413bfc209a634f522bf25" title="Draws a number with two digits (if less than 10 draws a 0 first) on the screen. " alt="" coords="148,157,307,184"/>
+<area shape="rect" id="node9" href="$group__graphics.html#ga776a8744adec930fe3a33571a5181b82" title="Draws the time on the screen. " alt="" coords="361,157,444,184"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a127e740651197e6a154719a76e031985" title="draw_scene" alt="" coords="499,81,591,108"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="639,81,724,108"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="772,81,881,108"/>
+</map>

@@ -1,0 +1,38 @@
+\hypertarget{structNode}{}\section{Node Struct Reference}
+\label{structNode}\index{Node@{Node}}
+
+
+Stores x and y coordinates and a struct node pointer.  
+
+
+
+
+{\ttfamily \#include $<$snake.\+h$>$}
+
+
+
+Collaboration diagram for Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{structNode__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__snake_gaff1029a518bdc2651007b8856f958364}{x}
+\item 
+int \hyperlink{group__snake_gaa3e5b5240023b4528ae85057b3324202}{y}
+\item 
+struct \hyperlink{structNode}{Node} $\ast$ \hyperlink{group__snake_gaf67b110ca1a258b793bf69d306929b22}{next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores x and y coordinates and a struct node pointer. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{snake_8h}{snake.\+h}\end{DoxyCompactItemize}

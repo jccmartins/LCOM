@@ -1,0 +1,89 @@
+\hypertarget{group__snake}{}\section{snake}
+\label{group__snake}\index{snake@{snake}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structNode}{Node}
+\begin{DoxyCompactList}\small\item\em Stores x and y coordinates and a struct node pointer. \end{DoxyCompactList}\item 
+struct \hyperlink{structSnake}{Snake}
+\begin{DoxyCompactList}\small\item\em Stores snake information. \end{DoxyCompactList}\item 
+struct \hyperlink{structApple}{Apple}
+\begin{DoxyCompactList}\small\item\em Stores apple position (x and y) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__snake_ga437ef08681e7210d6678427030446a54}\label{group__snake_ga437ef08681e7210d6678427030446a54}} 
+\#define {\bfseries L\+E\+FT}~0
+\item 
+\mbox{\Hypertarget{group__snake_ga1965eaca47dbf3f87acdafc2208f04eb}\label{group__snake_ga1965eaca47dbf3f87acdafc2208f04eb}} 
+\#define {\bfseries UP}~1
+\item 
+\mbox{\Hypertarget{group__snake_ga80fb826a684cf3f0d306b22aa100ddac}\label{group__snake_ga80fb826a684cf3f0d306b22aa100ddac}} 
+\#define {\bfseries R\+I\+G\+HT}~2
+\item 
+\mbox{\Hypertarget{group__snake_ga4193cd1c8c2e6ebd0e056fa2364a663f}\label{group__snake_ga4193cd1c8c2e6ebd0e056fa2364a663f}} 
+\#define {\bfseries D\+O\+WN}~3
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__snake_ga1ae3641fd30af1df1253e07890eb5fd3}\label{group__snake_ga1ae3641fd30af1df1253e07890eb5fd3}} 
+void() \hyperlink{group__snake_ga1ae3641fd30af1df1253e07890eb5fd3}{create\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Create snake struct with size 4, score 0 and direction R\+I\+G\+HT. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__snake_gaeb429d76c826d2c0620425031a995528}\label{group__snake_gaeb429d76c826d2c0620425031a995528}} 
+bool() \hyperlink{group__snake_gaeb429d76c826d2c0620425031a995528}{is\+\_\+snake\+\_\+at\+\_\+end\+\_\+of\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Checks if snake is at the end of the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__snake_ga019c20c4c67169ac20f2959a0697e89e}\label{group__snake_ga019c20c4c67169ac20f2959a0697e89e}} 
+bool() \hyperlink{group__snake_ga019c20c4c67169ac20f2959a0697e89e}{snake\+\_\+apple\+\_\+collision} ()
+\begin{DoxyCompactList}\small\item\em Detects snake/apple collision, true if there is a collision, false if not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__snake_ga22e049c193218c9d877dd91006e5205a}\label{group__snake_ga22e049c193218c9d877dd91006e5205a}} 
+bool() \hyperlink{group__snake_ga22e049c193218c9d877dd91006e5205a}{snake\+\_\+snake\+\_\+collision} ()
+\begin{DoxyCompactList}\small\item\em Detects snake/snake collisions ~\newline
+ Returns true if there is a collision and false if not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df}\label{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df}} 
+bool() \hyperlink{group__snake_ga9af510c579ee289c7d6cc5a8d65cc3df}{move\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Move snake, true if snake can move, false if not (when snake collides with itself) ~\newline
+ If snake collides with apple creates a new head for the snake and returns true ~\newline
+ If snake collides with itself returns false ~\newline
+ If there are no collisions creates a new head for the snake and deletes the last node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__snake_ga2d7305ea484489bb0edc9d48eb78c584}\label{group__snake_ga2d7305ea484489bb0edc9d48eb78c584}} 
+bool() \hyperlink{group__snake_ga2d7305ea484489bb0edc9d48eb78c584}{change\+\_\+snake\+\_\+direction} (uint8\+\_\+t byte)
+\begin{DoxyCompactList}\small\item\em Change snake direction, using keyboard arrows ~\newline
+ Returns true if it can change direction, false otherwise (if new direction is the opposite of the current one) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__snake_gaff1029a518bdc2651007b8856f958364}\label{group__snake_gaff1029a518bdc2651007b8856f958364}} 
+int {\bfseries Node\+::x}
+\item 
+\mbox{\Hypertarget{group__snake_gaa3e5b5240023b4528ae85057b3324202}\label{group__snake_gaa3e5b5240023b4528ae85057b3324202}} 
+int {\bfseries Node\+::y}
+\item 
+\mbox{\Hypertarget{group__snake_gaf67b110ca1a258b793bf69d306929b22}\label{group__snake_gaf67b110ca1a258b793bf69d306929b22}} 
+struct \hyperlink{structNode}{Node} $\ast$ {\bfseries Node\+::next}
+\item 
+\mbox{\Hypertarget{group__snake_ga109053b41cd5f989eac4742f0b139564}\label{group__snake_ga109053b41cd5f989eac4742f0b139564}} 
+struct \hyperlink{structNode}{Node} $\ast$ {\bfseries Snake\+::head}
+\item 
+\mbox{\Hypertarget{group__snake_gac5974bcc8ad17bcbcc596efee11ac663}\label{group__snake_gac5974bcc8ad17bcbcc596efee11ac663}} 
+uint16\+\_\+t {\bfseries Snake\+::score}
+\item 
+\mbox{\Hypertarget{group__snake_gadc40d93d974c78cf3011671c4d290d87}\label{group__snake_gadc40d93d974c78cf3011671c4d290d87}} 
+uint16\+\_\+t {\bfseries Snake\+::direction}
+\item 
+\mbox{\Hypertarget{group__snake_gaedf8e7ca13c3d949b838b213972a750b}\label{group__snake_gaedf8e7ca13c3d949b838b213972a750b}} 
+int {\bfseries Apple\+::x}
+\item 
+\mbox{\Hypertarget{group__snake_ga4f79ed7ae0b68f49053147b3d8bad28c}\label{group__snake_ga4f79ed7ae0b68f49053147b3d8bad28c}} 
+int {\bfseries Apple\+::y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structSnake}{Snake} functions and structs used.
+
+\begin{DoxyAuthor}{Author}
+João Carlos Carreira Martins 
+
+João Francisco de Pinho Brandão 
+\end{DoxyAuthor}

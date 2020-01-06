@@ -1,0 +1,5 @@
+<map id="decimal_to_bcd" name="decimal_to_bcd">
+<area shape="rect" id="node2" href="$group__rtc.html#ga48e4065b3387c3e8c78a1e114c73554e" title="Set time of the alarm seconds after time specified in hours, minutes and seconds. ..." alt="" coords="167,5,335,32"/>
+<area shape="rect" id="node3" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="383,5,468,32"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="516,5,625,32"/>
+</map>

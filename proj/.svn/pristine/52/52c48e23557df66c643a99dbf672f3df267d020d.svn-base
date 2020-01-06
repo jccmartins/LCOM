@@ -1,0 +1,26 @@
+\hypertarget{structMouse}{}\section{Mouse Struct Reference}
+\label{structMouse}\index{Mouse@{Mouse}}
+
+
+Stores mouse x and y position.  
+
+
+
+
+{\ttfamily \#include $<$mouse.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries x}
+\item 
+int {\bfseries y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores mouse x and y position. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+mouse.\+h\end{DoxyCompactItemize}

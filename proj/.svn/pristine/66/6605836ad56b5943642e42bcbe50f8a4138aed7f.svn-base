@@ -1,0 +1,333 @@
+\hypertarget{graphics_8c}{}\section{graphics.\+c File Reference}
+\label{graphics_8c}\index{graphics.\+c@{graphics.\+c}}
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}snake.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/0.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/1.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/2.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/3.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/4.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/5.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/6.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/7.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/8.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/9.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/apple.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/mouse-\/pointer.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/trophy.\+xpm\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../res/two\+\_\+dots.\+xpm\char`\"{}}\newline
+Include dependency graph for graphics.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group__graphics_gac0ff810d1678aafb25163c461294d844}{load\+\_\+all\+\_\+xpm} ()
+\begin{DoxyCompactList}\small\item\em Load all xpm files used for this project. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga7b1863ecc3c548e84ac906dcfde07f80}{set\+\_\+\+V\+B\+E\+\_\+mode} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set a V\+BE mode. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga65f94690b45d2d89490a476bc0876ac4}{vg\+\_\+draw\+\_\+pixel} (bool vram\+Directly, int x, int y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw pixel to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw line to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga99d2da2559e11200c6b40c469e9977ec}{vg\+\_\+draw\+\_\+rectangle} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw rectangle to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga916bc37e49907c4ab956faed54cca26c}{display\+\_\+xpm} (bool vram\+Directly, xpm\+\_\+image\+\_\+t img, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Draw xpm to buffer. \end{DoxyCompactList}\item 
+uint16\+\_\+t() \hyperlink{group__graphics_gace1c78dff1f4213a58831af87a14553f}{get\+\_\+x\+Res} ()
+\begin{DoxyCompactList}\small\item\em Get X resolution of current V\+BE mode. \end{DoxyCompactList}\item 
+uint16\+\_\+t() \hyperlink{group__graphics_ga214f61afab0729e1cac38b3372d6c136}{get\+\_\+y\+Res} ()
+\begin{DoxyCompactList}\small\item\em Get Y resolution of current V\+BE mode. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga3b11d835d79f07bc68a7411380ab079f}{draw\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Draws map of the game. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga2a792507ffcbc0b1674663fdd2912146}{draw\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Draws snake in the map. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga7312ae0798b69b9b882f214132f3125c}{draw\+\_\+mouse} ()
+\begin{DoxyCompactList}\small\item\em Draws mouse pointer. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_gab7db602b92bb5aac8acef76d0f054841}{draw\+\_\+apple} ()
+\begin{DoxyCompactList}\small\item\em Draws apple on the screen if it exists. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga80af57db2938c468835bd5530bee459b}{draw\+\_\+score} ()
+\begin{DoxyCompactList}\small\item\em Draws score on the board. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_gad39625cb1ee413bfc209a634f522bf25}{draw\+\_\+two\+\_\+digit\+\_\+number} (uint32\+\_\+t number, uint16\+\_\+t $\ast$x, uint16\+\_\+t $\ast$y)
+\begin{DoxyCompactList}\small\item\em Draws a number with two digits (if less than 10 draws a 0 first) on the screen. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga776a8744adec930fe3a33571a5181b82}{draw\+\_\+time} (struct \hyperlink{structTime}{Time} $\ast$\hyperlink{rtc_8c_aeff6413b7331c7e06f7cf170d8462575}{rtc\+\_\+time})
+\begin{DoxyCompactList}\small\item\em Draws the time on the screen. \end{DoxyCompactList}\item 
+void() \hyperlink{graphics_8c_a127e740651197e6a154719a76e031985}{draw\+\_\+scene} (struct \hyperlink{structTime}{Time} $\ast$\hyperlink{rtc_8c_aeff6413b7331c7e06f7cf170d8462575}{rtc\+\_\+time})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{graphics_8c_a32a3c1a996e95742fb59745996e0b197}{pixels\+\_\+per\+\_\+unit}
+\item 
+struct \hyperlink{structSnake}{Snake} $\ast$ \hyperlink{graphics_8c_a1ba5c80cb370285c30043c5a2dc77fc9}{snake}
+\item 
+struct \hyperlink{structApple}{Apple} $\ast$ \hyperlink{graphics_8c_a81cf9cc1a8086a17d8efb8b983492478}{apple}
+\item 
+struct \hyperlink{structMouse}{Mouse} $\ast$ \hyperlink{graphics_8c_ab401f1233d28428120e27a8695d1d028}{mouse}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a8d6b586ff9c58e31bb7f89fe593b0496}{zero\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a06a61310265e3b593c52bd2acae6bb5f}{one\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_ac401d5f8271ba289a416e5efb8120e00}{two\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a640afed91f9bb514084a0e125a06409e}{three\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_adc3540163af153a500a6cfb92cc2e3c9}{four\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a080a61f7d9bc7b8de2c430bf0cc9894d}{five\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_ac54ea75e82fcce67ecf46d5ef51aba96}{six\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_ab8fa08e2054134c1bf943c55820b058c}{seven\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a99da0d80d136a98b4e9e41ffe339b49e}{eight\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a743045a6c44330fc5ca69e36aa59a774}{nine\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_abbde36f5501a6841c7cfca2b94b7edfe}{apple\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a0b4484793984a9c15383b7a177b6e9e8}{mouse\+\_\+pointer\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a4a12f64ed43c83e9e7aae325f8d2b6ea}{trophy\+\_\+img}
+\item 
+xpm\+\_\+image\+\_\+t \hyperlink{graphics_8c_a1c7a67caf6ac6718c2a2d119e8d4dd41}{two\+\_\+dots\+\_\+img}
+\item 
+static void $\ast$ \hyperlink{graphics_8c_a5077a1a703b40b073dc6b5c1129ab0a1}{video\+\_\+mem}
+\item 
+static void $\ast$ \hyperlink{graphics_8c_aacf379fecea5d8efab6a3fb96f7fd96b}{aux\+\_\+video\+\_\+mem}
+\item 
+static uint16\+\_\+t \hyperlink{graphics_8c_a317816591bbfb4a3c2dea70e110f686c}{x\+Res}
+\item 
+static uint16\+\_\+t \hyperlink{graphics_8c_ac15fae4c1d01322f3f56020c549eec6c}{y\+Res}
+\item 
+static uint8\+\_\+t \hyperlink{graphics_8c_a6a3c851ca52ea8aa201b6753a4585736}{bits\+Per\+Pixel}
+\item 
+static uint8\+\_\+t \hyperlink{graphics_8c_aea399bf1ee5c1c440ea91f5f100260fb}{memory\+Model}
+\item 
+static uint8\+\_\+t \hyperlink{graphics_8c_a3e8195ef6e1ab0cb5d963a178533af7e}{red\+Mask\+Size}
+\item 
+static uint8\+\_\+t \hyperlink{graphics_8c_aef1d2cab6f68031420ea586a2badc57d}{green\+Mask\+Size}
+\item 
+static uint8\+\_\+t \hyperlink{graphics_8c_a0454e08e458eb1d4b0bbfb5d0fd4dde1}{blue\+Mask\+Size}
+\item 
+static uint8\+\_\+t \hyperlink{graphics_8c_a005a8fe5ccf803a509ae11e26111dc06}{red\+Field\+Position}
+\item 
+static uint8\+\_\+t \hyperlink{graphics_8c_ad78c1d4f72b4ec78d14303dfc0e3ff0f}{green\+Field\+Position}
+\item 
+static uint8\+\_\+t \hyperlink{graphics_8c_ac9a1069fc97e7286c2d80119435307f6}{blue\+Field\+Position}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8c_a127e740651197e6a154719a76e031985}\label{graphics_8c_a127e740651197e6a154719a76e031985}} 
+\index{graphics.\+c@{graphics.\+c}!draw\+\_\+scene@{draw\+\_\+scene}}
+\index{draw\+\_\+scene@{draw\+\_\+scene}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+scene()}{draw\_scene()}}
+{\footnotesize\ttfamily void() draw\+\_\+scene (\begin{DoxyParamCaption}\item[{struct \hyperlink{structTime}{Time} $\ast$}]{rtc\+\_\+time }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a127e740651197e6a154719a76e031985_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8c_a127e740651197e6a154719a76e031985_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{graphics_8c_a81cf9cc1a8086a17d8efb8b983492478}\label{graphics_8c_a81cf9cc1a8086a17d8efb8b983492478}} 
+\index{graphics.\+c@{graphics.\+c}!apple@{apple}}
+\index{apple@{apple}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{apple}{apple}}
+{\footnotesize\ttfamily struct \hyperlink{structApple}{Apple}$\ast$ apple}
+
+\mbox{\Hypertarget{graphics_8c_abbde36f5501a6841c7cfca2b94b7edfe}\label{graphics_8c_abbde36f5501a6841c7cfca2b94b7edfe}} 
+\index{graphics.\+c@{graphics.\+c}!apple\+\_\+img@{apple\+\_\+img}}
+\index{apple\+\_\+img@{apple\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{apple\+\_\+img}{apple\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t apple\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_aacf379fecea5d8efab6a3fb96f7fd96b}\label{graphics_8c_aacf379fecea5d8efab6a3fb96f7fd96b}} 
+\index{graphics.\+c@{graphics.\+c}!aux\+\_\+video\+\_\+mem@{aux\+\_\+video\+\_\+mem}}
+\index{aux\+\_\+video\+\_\+mem@{aux\+\_\+video\+\_\+mem}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{aux\+\_\+video\+\_\+mem}{aux\_video\_mem}}
+{\footnotesize\ttfamily void $\ast$ aux\+\_\+video\+\_\+mem\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a6a3c851ca52ea8aa201b6753a4585736}\label{graphics_8c_a6a3c851ca52ea8aa201b6753a4585736}} 
+\index{graphics.\+c@{graphics.\+c}!bits\+Per\+Pixel@{bits\+Per\+Pixel}}
+\index{bits\+Per\+Pixel@{bits\+Per\+Pixel}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{bits\+Per\+Pixel}{bitsPerPixel}}
+{\footnotesize\ttfamily uint8\+\_\+t bits\+Per\+Pixel\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_ac9a1069fc97e7286c2d80119435307f6}\label{graphics_8c_ac9a1069fc97e7286c2d80119435307f6}} 
+\index{graphics.\+c@{graphics.\+c}!blue\+Field\+Position@{blue\+Field\+Position}}
+\index{blue\+Field\+Position@{blue\+Field\+Position}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{blue\+Field\+Position}{blueFieldPosition}}
+{\footnotesize\ttfamily uint8\+\_\+t blue\+Field\+Position\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a0454e08e458eb1d4b0bbfb5d0fd4dde1}\label{graphics_8c_a0454e08e458eb1d4b0bbfb5d0fd4dde1}} 
+\index{graphics.\+c@{graphics.\+c}!blue\+Mask\+Size@{blue\+Mask\+Size}}
+\index{blue\+Mask\+Size@{blue\+Mask\+Size}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{blue\+Mask\+Size}{blueMaskSize}}
+{\footnotesize\ttfamily uint8\+\_\+t blue\+Mask\+Size\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a99da0d80d136a98b4e9e41ffe339b49e}\label{graphics_8c_a99da0d80d136a98b4e9e41ffe339b49e}} 
+\index{graphics.\+c@{graphics.\+c}!eight\+\_\+img@{eight\+\_\+img}}
+\index{eight\+\_\+img@{eight\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{eight\+\_\+img}{eight\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t eight\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_a080a61f7d9bc7b8de2c430bf0cc9894d}\label{graphics_8c_a080a61f7d9bc7b8de2c430bf0cc9894d}} 
+\index{graphics.\+c@{graphics.\+c}!five\+\_\+img@{five\+\_\+img}}
+\index{five\+\_\+img@{five\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{five\+\_\+img}{five\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t five\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_adc3540163af153a500a6cfb92cc2e3c9}\label{graphics_8c_adc3540163af153a500a6cfb92cc2e3c9}} 
+\index{graphics.\+c@{graphics.\+c}!four\+\_\+img@{four\+\_\+img}}
+\index{four\+\_\+img@{four\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{four\+\_\+img}{four\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t four\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_ad78c1d4f72b4ec78d14303dfc0e3ff0f}\label{graphics_8c_ad78c1d4f72b4ec78d14303dfc0e3ff0f}} 
+\index{graphics.\+c@{graphics.\+c}!green\+Field\+Position@{green\+Field\+Position}}
+\index{green\+Field\+Position@{green\+Field\+Position}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{green\+Field\+Position}{greenFieldPosition}}
+{\footnotesize\ttfamily uint8\+\_\+t green\+Field\+Position\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_aef1d2cab6f68031420ea586a2badc57d}\label{graphics_8c_aef1d2cab6f68031420ea586a2badc57d}} 
+\index{graphics.\+c@{graphics.\+c}!green\+Mask\+Size@{green\+Mask\+Size}}
+\index{green\+Mask\+Size@{green\+Mask\+Size}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{green\+Mask\+Size}{greenMaskSize}}
+{\footnotesize\ttfamily uint8\+\_\+t green\+Mask\+Size\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_aea399bf1ee5c1c440ea91f5f100260fb}\label{graphics_8c_aea399bf1ee5c1c440ea91f5f100260fb}} 
+\index{graphics.\+c@{graphics.\+c}!memory\+Model@{memory\+Model}}
+\index{memory\+Model@{memory\+Model}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{memory\+Model}{memoryModel}}
+{\footnotesize\ttfamily uint8\+\_\+t memory\+Model\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_ab401f1233d28428120e27a8695d1d028}\label{graphics_8c_ab401f1233d28428120e27a8695d1d028}} 
+\index{graphics.\+c@{graphics.\+c}!mouse@{mouse}}
+\index{mouse@{mouse}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{mouse}{mouse}}
+{\footnotesize\ttfamily struct \hyperlink{structMouse}{Mouse}$\ast$ mouse}
+
+\mbox{\Hypertarget{graphics_8c_a0b4484793984a9c15383b7a177b6e9e8}\label{graphics_8c_a0b4484793984a9c15383b7a177b6e9e8}} 
+\index{graphics.\+c@{graphics.\+c}!mouse\+\_\+pointer\+\_\+img@{mouse\+\_\+pointer\+\_\+img}}
+\index{mouse\+\_\+pointer\+\_\+img@{mouse\+\_\+pointer\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{mouse\+\_\+pointer\+\_\+img}{mouse\_pointer\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t mouse\+\_\+pointer\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_a743045a6c44330fc5ca69e36aa59a774}\label{graphics_8c_a743045a6c44330fc5ca69e36aa59a774}} 
+\index{graphics.\+c@{graphics.\+c}!nine\+\_\+img@{nine\+\_\+img}}
+\index{nine\+\_\+img@{nine\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{nine\+\_\+img}{nine\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t nine\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_a06a61310265e3b593c52bd2acae6bb5f}\label{graphics_8c_a06a61310265e3b593c52bd2acae6bb5f}} 
+\index{graphics.\+c@{graphics.\+c}!one\+\_\+img@{one\+\_\+img}}
+\index{one\+\_\+img@{one\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{one\+\_\+img}{one\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t one\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_a32a3c1a996e95742fb59745996e0b197}\label{graphics_8c_a32a3c1a996e95742fb59745996e0b197}} 
+\index{graphics.\+c@{graphics.\+c}!pixels\+\_\+per\+\_\+unit@{pixels\+\_\+per\+\_\+unit}}
+\index{pixels\+\_\+per\+\_\+unit@{pixels\+\_\+per\+\_\+unit}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{pixels\+\_\+per\+\_\+unit}{pixels\_per\_unit}}
+{\footnotesize\ttfamily uint16\+\_\+t pixels\+\_\+per\+\_\+unit}
+
+\mbox{\Hypertarget{graphics_8c_a005a8fe5ccf803a509ae11e26111dc06}\label{graphics_8c_a005a8fe5ccf803a509ae11e26111dc06}} 
+\index{graphics.\+c@{graphics.\+c}!red\+Field\+Position@{red\+Field\+Position}}
+\index{red\+Field\+Position@{red\+Field\+Position}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{red\+Field\+Position}{redFieldPosition}}
+{\footnotesize\ttfamily uint8\+\_\+t red\+Field\+Position\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a3e8195ef6e1ab0cb5d963a178533af7e}\label{graphics_8c_a3e8195ef6e1ab0cb5d963a178533af7e}} 
+\index{graphics.\+c@{graphics.\+c}!red\+Mask\+Size@{red\+Mask\+Size}}
+\index{red\+Mask\+Size@{red\+Mask\+Size}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{red\+Mask\+Size}{redMaskSize}}
+{\footnotesize\ttfamily uint8\+\_\+t red\+Mask\+Size\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_ab8fa08e2054134c1bf943c55820b058c}\label{graphics_8c_ab8fa08e2054134c1bf943c55820b058c}} 
+\index{graphics.\+c@{graphics.\+c}!seven\+\_\+img@{seven\+\_\+img}}
+\index{seven\+\_\+img@{seven\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{seven\+\_\+img}{seven\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t seven\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_ac54ea75e82fcce67ecf46d5ef51aba96}\label{graphics_8c_ac54ea75e82fcce67ecf46d5ef51aba96}} 
+\index{graphics.\+c@{graphics.\+c}!six\+\_\+img@{six\+\_\+img}}
+\index{six\+\_\+img@{six\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{six\+\_\+img}{six\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t six\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_a1ba5c80cb370285c30043c5a2dc77fc9}\label{graphics_8c_a1ba5c80cb370285c30043c5a2dc77fc9}} 
+\index{graphics.\+c@{graphics.\+c}!snake@{snake}}
+\index{snake@{snake}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{snake}{snake}}
+{\footnotesize\ttfamily struct \hyperlink{structSnake}{Snake}$\ast$ snake}
+
+\mbox{\Hypertarget{graphics_8c_a640afed91f9bb514084a0e125a06409e}\label{graphics_8c_a640afed91f9bb514084a0e125a06409e}} 
+\index{graphics.\+c@{graphics.\+c}!three\+\_\+img@{three\+\_\+img}}
+\index{three\+\_\+img@{three\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{three\+\_\+img}{three\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t three\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_a4a12f64ed43c83e9e7aae325f8d2b6ea}\label{graphics_8c_a4a12f64ed43c83e9e7aae325f8d2b6ea}} 
+\index{graphics.\+c@{graphics.\+c}!trophy\+\_\+img@{trophy\+\_\+img}}
+\index{trophy\+\_\+img@{trophy\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{trophy\+\_\+img}{trophy\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t trophy\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_a1c7a67caf6ac6718c2a2d119e8d4dd41}\label{graphics_8c_a1c7a67caf6ac6718c2a2d119e8d4dd41}} 
+\index{graphics.\+c@{graphics.\+c}!two\+\_\+dots\+\_\+img@{two\+\_\+dots\+\_\+img}}
+\index{two\+\_\+dots\+\_\+img@{two\+\_\+dots\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{two\+\_\+dots\+\_\+img}{two\_dots\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t two\+\_\+dots\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_ac401d5f8271ba289a416e5efb8120e00}\label{graphics_8c_ac401d5f8271ba289a416e5efb8120e00}} 
+\index{graphics.\+c@{graphics.\+c}!two\+\_\+img@{two\+\_\+img}}
+\index{two\+\_\+img@{two\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{two\+\_\+img}{two\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t two\+\_\+img}
+
+\mbox{\Hypertarget{graphics_8c_a5077a1a703b40b073dc6b5c1129ab0a1}\label{graphics_8c_a5077a1a703b40b073dc6b5c1129ab0a1}} 
+\index{graphics.\+c@{graphics.\+c}!video\+\_\+mem@{video\+\_\+mem}}
+\index{video\+\_\+mem@{video\+\_\+mem}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{video\+\_\+mem}{video\_mem}}
+{\footnotesize\ttfamily void$\ast$ video\+\_\+mem\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a317816591bbfb4a3c2dea70e110f686c}\label{graphics_8c_a317816591bbfb4a3c2dea70e110f686c}} 
+\index{graphics.\+c@{graphics.\+c}!x\+Res@{x\+Res}}
+\index{x\+Res@{x\+Res}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{x\+Res}{xRes}}
+{\footnotesize\ttfamily uint16\+\_\+t x\+Res\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_ac15fae4c1d01322f3f56020c549eec6c}\label{graphics_8c_ac15fae4c1d01322f3f56020c549eec6c}} 
+\index{graphics.\+c@{graphics.\+c}!y\+Res@{y\+Res}}
+\index{y\+Res@{y\+Res}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{y\+Res}{yRes}}
+{\footnotesize\ttfamily uint16\+\_\+t y\+Res\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{graphics_8c_a8d6b586ff9c58e31bb7f89fe593b0496}\label{graphics_8c_a8d6b586ff9c58e31bb7f89fe593b0496}} 
+\index{graphics.\+c@{graphics.\+c}!zero\+\_\+img@{zero\+\_\+img}}
+\index{zero\+\_\+img@{zero\+\_\+img}!graphics.\+c@{graphics.\+c}}
+\subsubsection{\texorpdfstring{zero\+\_\+img}{zero\_img}}
+{\footnotesize\ttfamily xpm\+\_\+image\+\_\+t zero\+\_\+img}
+

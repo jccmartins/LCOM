@@ -1,0 +1,8 @@
+<map id="get_yRes" name="get_yRes">
+<area shape="rect" id="node2" href="$group__mouse.html#gad2dbdfeaa921e9d7a2796bfe003670a7" title="Create mouse struct with x and y position in the middle of the screen. " alt="" coords="351,5,455,32"/>
+<area shape="rect" id="node4" href="$group__mouse.html#gadd8392c6469ceff59d345a3a7ff1027a" title="Processes event from mouse. " alt="" coords="141,56,294,83"/>
+<area shape="rect" id="node6" href="$group__snake.html#gaeb429d76c826d2c0620425031a995528" title="Checks if snake is at the end of the map. " alt="" coords="132,107,303,133"/>
+<area shape="rect" id="node7" href="$group__snake.html#ga9af510c579ee289c7d6cc5a8d65cc3df" title="Move snake, true if snake can move, false if not (when snake collides with itself) &#160;&#160;If snake collide..." alt="" coords="355,107,451,133"/>
+<area shape="rect" id="node3" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="636,31,745,57"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="503,56,588,83"/>
+</map>

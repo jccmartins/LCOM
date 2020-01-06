@@ -1,0 +1,5 @@
+<map id="draw_time" name="draw_time">
+<area shape="rect" id="node2" href="$group__graphics.html#gad39625cb1ee413bfc209a634f522bf25" title="Draws a number with two digits (if less than 10 draws a 0 first) on the screen. " alt="" coords="136,5,295,32"/>
+<area shape="rect" id="node3" href="$group__graphics.html#ga916bc37e49907c4ab956faed54cca26c" title="Draw xpm to buffer. " alt="" coords="343,31,437,57"/>
+<area shape="rect" id="node4" href="$group__graphics.html#ga65f94690b45d2d89490a476bc0876ac4" title="Draw pixel to buffer. " alt="" coords="485,31,591,57"/>
+</map>

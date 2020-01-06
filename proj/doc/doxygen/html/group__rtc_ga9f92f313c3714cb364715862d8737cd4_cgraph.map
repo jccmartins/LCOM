@@ -1,0 +1,6 @@
+<map id="handle_update_int" name="handle_update_int">
+<area shape="rect" id="node2" href="$group__rtc.html#ga51db428cbafeba59111359b236ed248a" title="Returns hours from the RTC. " alt="" coords="188,5,263,32"/>
+<area shape="rect" id="node4" href="$group__rtc.html#gad64e3c6015d2b7c99c50817798309d52" title="Returns minutes from the RTC. " alt="" coords="182,56,269,83"/>
+<area shape="rect" id="node5" href="$group__rtc.html#ga03144495c6cd7841203162b527998b53" title="Returns seconds from the RTC. " alt="" coords="180,107,271,133"/>
+<area shape="rect" id="node3" href="$group__rtc.html#ga11fd18e1bdb318485926015c12a8ef15" title="Returns a decimal number converted from binary&#45;coded decimal. " alt="" coords="319,56,432,83"/>
+</map>

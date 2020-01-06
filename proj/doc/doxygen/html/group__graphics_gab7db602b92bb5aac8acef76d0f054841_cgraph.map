@@ -1,0 +1,4 @@
+<map id="draw_apple" name="draw_apple">
+<area shape="rect" id="node2" href="$group__graphics.html#ga916bc37e49907c4ab956faed54cca26c" title="Draw xpm to buffer. " alt="" coords="141,5,236,32"/>
+<area shape="rect" id="node3" href="$group__graphics.html#ga65f94690b45d2d89490a476bc0876ac4" title="Draw pixel to buffer. " alt="" coords="284,5,389,32"/>
+</map>

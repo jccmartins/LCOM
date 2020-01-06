@@ -1,0 +1,57 @@
+\hypertarget{graphics_8h}{}\section{graphics.\+h File Reference}
+\label{graphics_8h}\index{graphics.\+h@{graphics.\+h}}
+{\ttfamily \#include \char`\"{}i8042.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$lcom/lcf.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}rtc.\+h\char`\"{}}\newline
+Include dependency graph for graphics.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{graphics_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{graphics_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void() \hyperlink{group__graphics_gac0ff810d1678aafb25163c461294d844}{load\+\_\+all\+\_\+xpm} ()
+\begin{DoxyCompactList}\small\item\em Load all xpm files used for this project. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga7b1863ecc3c548e84ac906dcfde07f80}{set\+\_\+\+V\+B\+E\+\_\+mode} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set a V\+BE mode. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga65f94690b45d2d89490a476bc0876ac4}{vg\+\_\+draw\+\_\+pixel} (bool vram\+Directly, int x, int y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw pixel to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw line to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga99d2da2559e11200c6b40c469e9977ec}{vg\+\_\+draw\+\_\+rectangle} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw rectangle to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga916bc37e49907c4ab956faed54cca26c}{display\+\_\+xpm} (bool vram\+Directly, xpm\+\_\+image\+\_\+t img, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Draw xpm to buffer. \end{DoxyCompactList}\item 
+uint16\+\_\+t() \hyperlink{group__graphics_gace1c78dff1f4213a58831af87a14553f}{get\+\_\+x\+Res} ()
+\begin{DoxyCompactList}\small\item\em Get X resolution of current V\+BE mode. \end{DoxyCompactList}\item 
+uint16\+\_\+t() \hyperlink{group__graphics_ga214f61afab0729e1cac38b3372d6c136}{get\+\_\+y\+Res} ()
+\begin{DoxyCompactList}\small\item\em Get Y resolution of current V\+BE mode. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga3b11d835d79f07bc68a7411380ab079f}{draw\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Draws map of the game. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga2a792507ffcbc0b1674663fdd2912146}{draw\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Draws snake in the map. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga7312ae0798b69b9b882f214132f3125c}{draw\+\_\+mouse} ()
+\begin{DoxyCompactList}\small\item\em Draws mouse pointer. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_gab7db602b92bb5aac8acef76d0f054841}{draw\+\_\+apple} ()
+\begin{DoxyCompactList}\small\item\em Draws apple on the screen if it exists. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga80af57db2938c468835bd5530bee459b}{draw\+\_\+score} ()
+\begin{DoxyCompactList}\small\item\em Draws score on the board. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_gad39625cb1ee413bfc209a634f522bf25}{draw\+\_\+two\+\_\+digit\+\_\+number} (uint32\+\_\+t number, uint16\+\_\+t $\ast$x, uint16\+\_\+t $\ast$y)
+\begin{DoxyCompactList}\small\item\em Draws a number with two digits (if less than 10 draws a 0 first) on the screen. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga776a8744adec930fe3a33571a5181b82}{draw\+\_\+time} (struct \hyperlink{structTime}{Time} $\ast$\hyperlink{rtc_8c_aeff6413b7331c7e06f7cf170d8462575}{rtc\+\_\+time})
+\begin{DoxyCompactList}\small\item\em Draws the time on the screen. \end{DoxyCompactList}\item 
+void() \hyperlink{group__graphics_ga81daeff83fc5160d6c740f349ea53770}{draw\+\_\+scene} ()
+\begin{DoxyCompactList}\small\item\em Draws the game scene with double buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}

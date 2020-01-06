@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.xpm": "c",
+        "snake.h": "c"
+    }
+}

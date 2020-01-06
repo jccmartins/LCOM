@@ -1,0 +1,5 @@
+<map id="draw_mouse" name="draw_mouse">
+<area shape="rect" id="node2" href="$graphics_8c.html#a127e740651197e6a154719a76e031985" title="draw_scene" alt="" coords="149,5,241,32"/>
+<area shape="rect" id="node3" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="289,5,375,32"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="423,5,532,32"/>
+</map>

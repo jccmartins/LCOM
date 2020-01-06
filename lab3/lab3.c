@@ -1,0 +1,241 @@
+#include <lcom/lcf.h>
+
+#include <lcom/lab3.h>
+
+#include <stdbool.h>
+#include <stdint.h>
+
+#include "keyboard.h"
+
+extern uint32_t sys_inb_counter;
+extern uint8_t byte;
+extern int counter;
+
+int main(int argc, char *argv[]) {
+  // sets the language of LCF messages (can be either EN-US or PT-PT)
+  lcf_set_language("EN-US");
+
+  // enables to log function invocations that are being "wrapped" by LCF
+  // [comment this out if you don't want/need it]
+  lcf_trace_calls("/home/lcom/labs/lab3/trace.txt");
+
+  // enables to save the output of printf function calls on a file
+  // [comment this out if you don't want/need it]
+  lcf_log_output("/home/lcom/labs/lab3/output.txt");
+
+  // handles control over to LCF
+  // [LCF handles command line arguments and invokes the right function]
+  if (lcf_start(argc, argv))
+    return 1;
+
+  // LCF clean up tasks
+  // [must be the last statement before return]
+  lcf_cleanup();
+
+  return 0;
+}
+
+int(kbd_test_scan)() {
+
+  uint8_t bit_no;
+
+  if (kbd_subscribe_int(&bit_no) != 0) {
+    return 1;
+  }
+
+  int r, ipc_status;
+  message msg;
+
+  uint32_t irq_set = BIT(bit_no);
+
+  uint8_t bytes[2], size = 0;
+  bool done = false;
+  bool make;
+
+  while (!(byte == ESC_BREAK)) {
+    /* Get a request message. */
+    if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
+      printf("driver_receive failed with: %d", r);
+      continue;
+    }
+    if (is_ipc_notify(ipc_status)) { /* received notification */
+      switch (_ENDPOINT_P(msg.m_source)) {
+        case HARDWARE: /* hardware interrupt notification */
+          if (msg.m_notify.interrupts & irq_set) {
+            kbc_ih();
+            bytes[size] = byte;
+            ++size;
+            if (bytes[size - 1] != 0xE0) {
+              make = !(bytes[size - 1] >> 7);
+              done = true;
+            }
+
+            if (done) {
+              kbd_print_scancode(make, size, bytes);
+              size = 0;
+              done = false;
+            }
+          }
+          break;
+        default:
+          break; /* no other notifications expected: do nothing */
+      }
+    }
+    else {
+      return 1;
+    }
+  }
+
+  if (kbd_print_no_sysinb(sys_inb_counter) != 0) {
+    return 1;
+  }
+
+  if (kbd_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  return 0;
+}
+
+int(kbd_test_poll)() {
+
+  uint8_t st;
+  uint8_t bytes[2], size = 0;
+  bool done = false;
+  bool make;
+
+  while (!(byte == ESC_BREAK)) {
+
+    do {
+      util_sys_inb(STAT_REG, &st);
+      tickdelay(micros_to_ticks(DELAY_US));
+  } while ((st & (AUX | OBF)) != 0x01);
+
+    if (done == true) {
+      size = 0;
+      done = false;
+    }
+
+    if ((st & (PARITY_ERROR | TIMEOUT_ERROR)) == 0x00) {
+      while (!done) {
+        util_sys_inb(OUT_BUF, &byte);
+        tickdelay(micros_to_ticks(DELAY_US));
+        bytes[size] = byte;
+        ++size;
+        if (bytes[size - 1] != 0xE0) {
+          make = !(bytes[size - 1] >> 7);
+          done = true;
+        }
+      }
+    }
+
+    kbd_print_scancode(make, size, bytes);
+  }
+
+  if (kbd_print_no_sysinb(sys_inb_counter) != 0)
+    return 1;
+
+  uint8_t cmd_byte;
+
+  if (is_IBF_set()) {
+    return 1;
+  }
+  sys_outb(IN_BUF_KBC_CMD, 0x20);
+  if (is_OBF_set()) {
+    return 1;
+  }
+  if (util_sys_inb(OUT_BUF, &cmd_byte)) { //read command byte
+    return 1;
+  }
+
+  cmd_byte = cmd_byte | KBC_CMD_BYTE_OBF; //enable interrupt on OBF, from keyboard
+
+  if (is_IBF_set()) {
+    return 1;
+  }
+  sys_outb(IN_BUF_KBC_CMD, 0x60);
+
+  if (is_IBF_set()) {
+    return 1;
+  }
+  sys_outb(IN_BUF_CMD_BYTE, cmd_byte); //write command byte
+
+  return 0;
+}
+
+int(kbd_test_timed_scan)(uint8_t n) {
+
+  uint8_t bytes[2], size = 0;
+  bool done = false;
+  bool make;
+
+  if (n <= 0)
+    return 1;
+
+  uint8_t timer_bit_no, kbd_bit_no, idle_seconds;
+
+  idle_seconds = n;
+
+  if (timer_subscribe_int(&timer_bit_no) != 0)
+    return 1;
+
+  if (kbd_subscribe_int(&kbd_bit_no) != 0)
+    return 1;
+
+  int r, ipc_status;
+  message msg;
+
+  uint32_t irq_timer0 = BIT(timer_bit_no);
+  uint32_t irq_kbd = BIT(kbd_bit_no);
+
+  while (!(byte == ESC_BREAK) && idle_seconds > 0) {
+    /* Get a request message. */
+    if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
+      printf("driver_receive failed with: %d", r);
+      continue;
+    }
+    if (is_ipc_notify(ipc_status)) { /* received notification */
+      switch (_ENDPOINT_P(msg.m_source)) {
+        case HARDWARE: /* hardware interrupt notification */
+          if (msg.m_notify.interrupts & irq_timer0) {
+            timer_int_handler();
+            if (counter % 60 == 0)
+              --idle_seconds;
+          }
+          if (msg.m_notify.interrupts & irq_kbd) {
+            counter = 0;
+            idle_seconds = n;
+            kbc_ih();
+            bytes[size] = byte;
+            ++size;
+            if (bytes[size - 1] != 0xE0) {
+              make = !(bytes[size - 1] >> 7);
+              done = true;
+            }
+
+            if (done) {
+              kbd_print_scancode(make, size, bytes);
+              size = 0;
+              done = false;
+            }
+          }
+          break;
+        default:
+          break; /* no other notifications expected: do nothing */
+      }
+    }
+    else {
+      return 1;
+    }
+  }
+
+  if (timer_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  if (kbd_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  return 0;
+}

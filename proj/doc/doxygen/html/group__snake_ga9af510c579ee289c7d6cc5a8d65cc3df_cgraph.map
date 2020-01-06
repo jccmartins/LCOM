@@ -1,0 +1,7 @@
+<map id="move_snake" name="move_snake">
+<area shape="rect" id="node2" href="$group__snake.html#ga22e049c193218c9d877dd91006e5205a" title="Detects snake/snake collisions &#160;&#160;Returns true if there is a collision and false if not..." alt="" coords="158,5,311,32"/>
+<area shape="rect" id="node3" href="$group__snake.html#gaeb429d76c826d2c0620425031a995528" title="Checks if snake is at the end of the map. " alt="" coords="149,107,320,133"/>
+<area shape="rect" id="node4" href="$group__graphics.html#gace1c78dff1f4213a58831af87a14553f" title="Get X resolution of current VBE mode. " alt="" coords="368,81,447,108"/>
+<area shape="rect" id="node5" href="$group__graphics.html#ga214f61afab0729e1cac38b3372d6c136" title="Get Y resolution of current VBE mode. " alt="" coords="368,132,447,159"/>
+<area shape="rect" id="node6" href="$group__snake.html#ga019c20c4c67169ac20f2959a0697e89e" title="Detects snake/apple collision, true if there is a collision, false if not. " alt="" coords="160,208,309,235"/>
+</map>

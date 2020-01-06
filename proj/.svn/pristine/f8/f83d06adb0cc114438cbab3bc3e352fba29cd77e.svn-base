@@ -1,0 +1,222 @@
+// IMPORTANT: you must include the following line in all your C files
+#include <lcom/lcf.h>
+#include <lcom/liblm.h>
+#include <lcom/proj.h>
+
+#include <stdint.h>
+#include <stdio.h>
+
+// Any header files included below this line should have been created by you
+#include "graphics.h"
+#include "keyboard.h"
+#include "mouse.h"
+#include "snake.h"
+
+int main(int argc, char *argv[]) {
+  // sets the language of LCF messages (can be either EN-US or PT-PT)
+  lcf_set_language("EN-US");
+
+  // enables to log function invocations that are being "wrapped" by LCF
+  // [comment this out if you don't want/need it]
+  lcf_trace_calls("/home/lcom/labs/proj/trace.txt");
+
+  // enables to save the output of printf function calls on a file
+  // [comment this out if you don't want/need it]
+  lcf_log_output("/home/lcom/labs/proj/output.txt");
+
+  // handles control over to LCF
+  // [LCF handles command line arguments and invokes the right function]
+  if (lcf_start(argc, argv))
+    return 1;
+
+  // LCF clean up tasks
+  // [must be the last statement before return]
+  lcf_cleanup();
+
+  return 0;
+}
+
+static int print_usage() {
+  printf("Usage: <mode - hex>\n");
+
+  return 1;
+}
+
+/**
+ * Game Loop
+ */
+
+//timer.c
+extern int counter;
+
+//keyboard.c
+extern uint8_t byte;
+
+//mouse.c
+extern struct packet pp;
+extern int packet_size;
+
+int(game_loop)() {
+
+  uint8_t fr_rate = 60;
+  uint8_t interruptions_per_frame = 60 / fr_rate;
+
+  uint8_t bytes[2], keycode_size = 0;
+  bool done = false;
+  bool make;
+
+  uint8_t timer_bit_no, kbd_bit_no, mouse_bit_no;
+
+  if (timer_subscribe_int(&timer_bit_no) != 0) {
+    return 1;
+  }
+
+  if (kbd_subscribe_int(&kbd_bit_no) != 0) {
+    return 1;
+  }
+
+  if (mouse_subscribe_int(&mouse_bit_no) != 0) {
+    return 1;
+  }
+
+  if (mouse_disable_irq() != 0) {
+    return 1;
+  }
+
+  //ENABLE DATA REPORTING
+  if (mouse_command(ENABLE_DATA_RPT) != ACK) {
+    return 1;
+  }
+
+  if (mouse_enable_irq() != 0) {
+    return 1;
+  }
+
+  int r, ipc_status;
+  message msg;
+
+  uint32_t irq_timer0 = BIT(timer_bit_no);
+  uint32_t irq_kbd = BIT(kbd_bit_no);
+  uint32_t irq_mouse = BIT(mouse_bit_no);
+
+  struct mouse_ev *mouse_event = NULL;
+
+  bool new_direction = false;
+
+  while (byte != ESC_BREAK) {
+    /* Get a request message. */
+    if ((r = driver_receive(ANY, &msg, &ipc_status)) != 0) {
+      printf("driver_receive failed with: %d", r);
+      continue;
+    }
+    if (is_ipc_notify(ipc_status)) { /* received notification */
+      switch (_ENDPOINT_P(msg.m_source)) {
+        case HARDWARE: /* hardware interrupt notification */
+          if (msg.m_notify.interrupts & irq_timer0) {
+            timer_int_handler();
+            if (counter % interruptions_per_frame == 0) {
+              draw_scene();
+              if (counter % (interruptions_per_frame * 5) == 0) {
+                move_snake();
+                new_direction = false;
+              }
+            }
+          }
+          if (msg.m_notify.interrupts & irq_kbd) {
+            kbc_ih();
+            bytes[keycode_size] = byte;
+            ++keycode_size;
+            if (bytes[keycode_size - 1] != 0xE0) {
+              make = !(bytes[keycode_size - 1] >> 7);
+              done = true;
+            }
+
+            if (done) {
+              kbd_print_scancode(make, keycode_size, bytes);
+
+              if (!new_direction) {
+                if (make && (keycode_size == 2) && bytes[0] == 0xe0) {
+                  if (change_snake_direction(bytes[1])) {
+                    new_direction = true;
+                  }
+                }
+              }
+
+              keycode_size = 0;
+              done = false;
+            }
+          }
+          if (msg.m_notify.interrupts & irq_mouse) {
+            mouse_ih();
+            if (packet_size == 3) {
+              packet_parser(&pp);
+              mouse_print_packet(&pp);
+              mouse_event = mouse_detect_event(&pp);
+              packet_size = 0;
+            }
+
+            if (mouse_event != NULL) {
+              mouse_process_event(mouse_event);
+            }
+          }
+          break;
+        default:
+          break; /* no other notifications expected: do nothing */
+      }
+    }
+    else {
+      return 1;
+    }
+  }
+
+  if (timer_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  if (kbd_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  if (mouse_disable_irq()) {
+    return 1;
+  }
+
+  //DISABLE DATA REPORTING
+  mouse_command(DISABLE_DATA_RPT);
+
+  if (mouse_enable_irq()) {
+    return 1;
+  }
+
+  if (mouse_unsubscribe_int() != 0) {
+    return 1;
+  }
+
+  return 0;
+}
+
+int(proj_main_loop)(int argc, char *argv[]) {
+
+  if (argc != 1) {
+    return print_usage();
+  }
+
+  uint16_t mode;
+
+  if (sscanf(argv[0], "%hx", &mode) != 1) {
+    printf("%s: invalid mode (%s)\n", __func__, argv[0]);
+  }
+
+  set_VBE_mode(mode);
+
+  create_mouse();
+  create_snake();
+  game_loop();
+
+  if (vg_exit() != 0) {
+    printf("video_test_init: vg_exit() failed \n");
+    return -1;
+  }
+
+  return 0;
+}

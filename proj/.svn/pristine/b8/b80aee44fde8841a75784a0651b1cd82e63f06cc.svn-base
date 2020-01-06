@@ -1,0 +1,158 @@
+\hypertarget{group__graphics}{}\section{graphics}
+\label{group__graphics}\index{graphics@{graphics}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__graphics_gac0ff810d1678aafb25163c461294d844}\label{group__graphics_gac0ff810d1678aafb25163c461294d844}} 
+void() \hyperlink{group__graphics_gac0ff810d1678aafb25163c461294d844}{load\+\_\+all\+\_\+xpm} ()
+\begin{DoxyCompactList}\small\item\em Load all xpm files used for this project. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga7b1863ecc3c548e84ac906dcfde07f80}{set\+\_\+\+V\+B\+E\+\_\+mode} (uint16\+\_\+t mode)
+\begin{DoxyCompactList}\small\item\em Set a V\+BE mode. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga65f94690b45d2d89490a476bc0876ac4}{vg\+\_\+draw\+\_\+pixel} (bool vram\+Directly, int x, int y, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw pixel to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga5e5b25bd525250f61f40b9e9f212d5e6}{vg\+\_\+draw\+\_\+hline} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t len, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw line to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga99d2da2559e11200c6b40c469e9977ec}{vg\+\_\+draw\+\_\+rectangle} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t width, uint16\+\_\+t height, uint32\+\_\+t color)
+\begin{DoxyCompactList}\small\item\em Draw rectangle to buffer. \end{DoxyCompactList}\item 
+int() \hyperlink{group__graphics_ga916bc37e49907c4ab956faed54cca26c}{display\+\_\+xpm} (bool vram\+Directly, xpm\+\_\+image\+\_\+t img, uint16\+\_\+t x, uint16\+\_\+t y)
+\begin{DoxyCompactList}\small\item\em Draw xpm to buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_gace1c78dff1f4213a58831af87a14553f}\label{group__graphics_gace1c78dff1f4213a58831af87a14553f}} 
+uint16\+\_\+t() \hyperlink{group__graphics_gace1c78dff1f4213a58831af87a14553f}{get\+\_\+x\+Res} ()
+\begin{DoxyCompactList}\small\item\em Get X resolution of current V\+BE mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_ga214f61afab0729e1cac38b3372d6c136}\label{group__graphics_ga214f61afab0729e1cac38b3372d6c136}} 
+uint16\+\_\+t() \hyperlink{group__graphics_ga214f61afab0729e1cac38b3372d6c136}{get\+\_\+y\+Res} ()
+\begin{DoxyCompactList}\small\item\em Get Y resolution of current V\+BE mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_ga3b11d835d79f07bc68a7411380ab079f}\label{group__graphics_ga3b11d835d79f07bc68a7411380ab079f}} 
+void() \hyperlink{group__graphics_ga3b11d835d79f07bc68a7411380ab079f}{draw\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Draws map of the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_ga2a792507ffcbc0b1674663fdd2912146}\label{group__graphics_ga2a792507ffcbc0b1674663fdd2912146}} 
+void() \hyperlink{group__graphics_ga2a792507ffcbc0b1674663fdd2912146}{draw\+\_\+snake} ()
+\begin{DoxyCompactList}\small\item\em Draws snake in the map. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_ga7312ae0798b69b9b882f214132f3125c}\label{group__graphics_ga7312ae0798b69b9b882f214132f3125c}} 
+void() \hyperlink{group__graphics_ga7312ae0798b69b9b882f214132f3125c}{draw\+\_\+mouse} ()
+\begin{DoxyCompactList}\small\item\em Draws mouse pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_gab7db602b92bb5aac8acef76d0f054841}\label{group__graphics_gab7db602b92bb5aac8acef76d0f054841}} 
+void() \hyperlink{group__graphics_gab7db602b92bb5aac8acef76d0f054841}{draw\+\_\+apple} ()
+\begin{DoxyCompactList}\small\item\em Draws apple on the screen if it exists. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_ga80af57db2938c468835bd5530bee459b}\label{group__graphics_ga80af57db2938c468835bd5530bee459b}} 
+void() \hyperlink{group__graphics_ga80af57db2938c468835bd5530bee459b}{draw\+\_\+score} ()
+\begin{DoxyCompactList}\small\item\em Draws score on the board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_gad39625cb1ee413bfc209a634f522bf25}\label{group__graphics_gad39625cb1ee413bfc209a634f522bf25}} 
+void() \hyperlink{group__graphics_gad39625cb1ee413bfc209a634f522bf25}{draw\+\_\+two\+\_\+digit\+\_\+number} (uint32\+\_\+t number, uint16\+\_\+t $\ast$x, uint16\+\_\+t $\ast$y)
+\begin{DoxyCompactList}\small\item\em Draws a number with two digits (if less than 10 draws a 0 first) on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_ga776a8744adec930fe3a33571a5181b82}\label{group__graphics_ga776a8744adec930fe3a33571a5181b82}} 
+void() \hyperlink{group__graphics_ga776a8744adec930fe3a33571a5181b82}{draw\+\_\+time} (struct \hyperlink{structTime}{Time} $\ast$rtc\+\_\+time)
+\begin{DoxyCompactList}\small\item\em Draws the time on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__graphics_ga81daeff83fc5160d6c740f349ea53770}\label{group__graphics_ga81daeff83fc5160d6c740f349ea53770}} 
+void() \hyperlink{group__graphics_ga81daeff83fc5160d6c740f349ea53770}{draw\+\_\+scene} ()
+\begin{DoxyCompactList}\small\item\em Draws the game scene with double buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for graphics.
+
+\begin{DoxyAuthor}{Author}
+João Carlos Carreira Martins 
+
+João Francisco de Pinho Brandão 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__graphics_ga916bc37e49907c4ab956faed54cca26c}\label{group__graphics_ga916bc37e49907c4ab956faed54cca26c}} 
+\index{graphics@{graphics}!display\+\_\+xpm@{display\+\_\+xpm}}
+\index{display\+\_\+xpm@{display\+\_\+xpm}!graphics@{graphics}}
+\subsubsection{\texorpdfstring{display\+\_\+xpm()}{display\_xpm()}}
+{\footnotesize\ttfamily int() display\+\_\+xpm (\begin{DoxyParamCaption}\item[{bool}]{vram\+Directly,  }\item[{xpm\+\_\+image\+\_\+t}]{img,  }\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y }\end{DoxyParamCaption})}
+
+
+
+Draw xpm to buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vram\+Directly} & -\/ If true draws xpm directly to video memory, if false it is drawn to an auxiliar buffer \\
+\hline
+{\em img} & -\/ Xpm image to be drawn \\
+\hline
+{\em x} & -\/ Upper left x coordinate \\
+\hline
+{\em y} & -\/ Upper left y coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__graphics_ga7b1863ecc3c548e84ac906dcfde07f80}\label{group__graphics_ga7b1863ecc3c548e84ac906dcfde07f80}} 
+\index{graphics@{graphics}!set\+\_\+\+V\+B\+E\+\_\+mode@{set\+\_\+\+V\+B\+E\+\_\+mode}}
+\index{set\+\_\+\+V\+B\+E\+\_\+mode@{set\+\_\+\+V\+B\+E\+\_\+mode}!graphics@{graphics}}
+\subsubsection{\texorpdfstring{set\+\_\+\+V\+B\+E\+\_\+mode()}{set\_VBE\_mode()}}
+{\footnotesize\ttfamily int() set\+\_\+\+V\+B\+E\+\_\+mode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set a V\+BE mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & -\/ Desired V\+BE mode to set \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__graphics_ga5e5b25bd525250f61f40b9e9f212d5e6}\label{group__graphics_ga5e5b25bd525250f61f40b9e9f212d5e6}} 
+\index{graphics@{graphics}!vg\+\_\+draw\+\_\+hline@{vg\+\_\+draw\+\_\+hline}}
+\index{vg\+\_\+draw\+\_\+hline@{vg\+\_\+draw\+\_\+hline}!graphics@{graphics}}
+\subsubsection{\texorpdfstring{vg\+\_\+draw\+\_\+hline()}{vg\_draw\_hline()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+hline (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{len,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw line to buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ Inital x coordinate \\
+\hline
+{\em y} & -\/ Initial y coordinate \\
+\hline
+{\em len} & -\/ Line length \\
+\hline
+{\em color} & -\/ Line color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__graphics_ga65f94690b45d2d89490a476bc0876ac4}\label{group__graphics_ga65f94690b45d2d89490a476bc0876ac4}} 
+\index{graphics@{graphics}!vg\+\_\+draw\+\_\+pixel@{vg\+\_\+draw\+\_\+pixel}}
+\index{vg\+\_\+draw\+\_\+pixel@{vg\+\_\+draw\+\_\+pixel}!graphics@{graphics}}
+\subsubsection{\texorpdfstring{vg\+\_\+draw\+\_\+pixel()}{vg\_draw\_pixel()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+pixel (\begin{DoxyParamCaption}\item[{bool}]{vram\+Directly,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw pixel to buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vram\+Directly} & -\/ If true pixel is drawn directly to the video memory, if false it is drawn to an auxiliar buffer \\
+\hline
+{\em color} & -\/ Pixel color \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__graphics_ga99d2da2559e11200c6b40c469e9977ec}\label{group__graphics_ga99d2da2559e11200c6b40c469e9977ec}} 
+\index{graphics@{graphics}!vg\+\_\+draw\+\_\+rectangle@{vg\+\_\+draw\+\_\+rectangle}}
+\index{vg\+\_\+draw\+\_\+rectangle@{vg\+\_\+draw\+\_\+rectangle}!graphics@{graphics}}
+\subsubsection{\texorpdfstring{vg\+\_\+draw\+\_\+rectangle()}{vg\_draw\_rectangle()}}
+{\footnotesize\ttfamily int() vg\+\_\+draw\+\_\+rectangle (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x,  }\item[{uint16\+\_\+t}]{y,  }\item[{uint16\+\_\+t}]{width,  }\item[{uint16\+\_\+t}]{height,  }\item[{uint32\+\_\+t}]{color }\end{DoxyParamCaption})}
+
+
+
+Draw rectangle to buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ Upper left x coordinate \\
+\hline
+{\em y} & -\/ Upper left y coordinate \\
+\hline
+{\em width} & -\/ Rectangle width \\
+\hline
+{\em height} & -\/ Rectangle height \\
+\hline
+{\em color} & -\/ Rectangle color \\
+\hline
+\end{DoxyParams}

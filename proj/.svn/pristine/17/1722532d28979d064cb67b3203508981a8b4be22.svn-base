@@ -1,0 +1,10 @@
+<map id="get_xRes" name="get_xRes">
+<area shape="rect" id="node2" href="$group__graphics.html#ga80af57db2938c468835bd5530bee459b" title="Draws score on the board. " alt="" coords="173,55,262,81"/>
+<area shape="rect" id="node6" href="$group__mouse.html#gad2dbdfeaa921e9d7a2796bfe003670a7" title="Create mouse struct with x and y position in the middle of the screen. " alt="" coords="552,17,656,44"/>
+<area shape="rect" id="node7" href="$group__mouse.html#gadd8392c6469ceff59d345a3a7ff1027a" title="Processes event from mouse. " alt="" coords="351,181,504,208"/>
+<area shape="rect" id="node8" href="$group__snake.html#gaeb429d76c826d2c0620425031a995528" title="Checks if snake is at the end of the map. " alt="" coords="132,156,303,183"/>
+<area shape="rect" id="node9" href="$group__snake.html#ga9af510c579ee289c7d6cc5a8d65cc3df" title="Move snake, true if snake can move, false if not (when snake collides with itself) &#160;&#160;If snake collide..." alt="" coords="379,105,475,132"/>
+<area shape="rect" id="node3" href="$graphics_8c.html#a127e740651197e6a154719a76e031985" title="draw_scene" alt="" coords="381,55,473,81"/>
+<area shape="rect" id="node4" href="$proj_8c.html#a649a26d3c9953d9f2af863e859e0c40d" title="game_loop" alt="" coords="561,80,647,107"/>
+<area shape="rect" id="node5" href="$proj_8c.html#a2a16f651eccbd248e1ad3b3b924b143b" title="proj_main_loop" alt="" coords="704,55,813,81"/>
+</map>

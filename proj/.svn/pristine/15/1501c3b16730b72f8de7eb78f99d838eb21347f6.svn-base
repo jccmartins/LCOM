@@ -1,0 +1,26 @@
+\hypertarget{structApple}{}\section{Apple Struct Reference}
+\label{structApple}\index{Apple@{Apple}}
+
+
+Stores apple position (x and y)  
+
+
+
+
+{\ttfamily \#include $<$snake.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries x}
+\item 
+int {\bfseries y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores apple position (x and y) 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+snake.\+h\end{DoxyCompactItemize}

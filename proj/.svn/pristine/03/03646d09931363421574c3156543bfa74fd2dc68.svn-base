@@ -1,0 +1,5 @@
+<map id="mouse_process_event" name="mouse_process_event">
+<area shape="rect" id="node2" href="$group__graphics.html#gace1c78dff1f4213a58831af87a14553f" title="Get X resolution of current VBE mode. " alt="" coords="242,5,321,32"/>
+<area shape="rect" id="node3" href="$group__graphics.html#ga214f61afab0729e1cac38b3372d6c136" title="Get Y resolution of current VBE mode. " alt="" coords="242,56,321,83"/>
+<area shape="rect" id="node4" href="$group__snake.html#ga019c20c4c67169ac20f2959a0697e89e" title="Detects snake/apple collision, true if there is a collision, false if not. " alt="" coords="207,107,356,133"/>
+</map>
